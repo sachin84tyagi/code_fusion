@@ -15,7 +15,6 @@ export function getTutorialContent(category: string, subCategory: string): strin
     if (!fileName) return null;
 
     const filePath = path.join(process.cwd(), "content", "tutorials", fileName);
-
     try {
         if (fs.existsSync(filePath)) {
             return fs.readFileSync(filePath, "utf8");
