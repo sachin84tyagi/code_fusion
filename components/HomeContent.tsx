@@ -19,15 +19,7 @@ export default function HomeContent({ tutorialContent }: HomeContentProps) {
     const activeSubCategory = searchParams.get("subCategory") || "";
     const displayCategory = contentData[activeCategory] ? activeCategory : "JS";
     const displayCategoryView = navItems.find(item => item.name === activeCategory)?.value || "JS";
-    console.log("-----------------------------------------------------")
-    console.log("searchParams :: ", searchParams);
-    console.log("activeCategory :: ", activeCategory);
-    console.log("activeSubCategory :: ", activeSubCategory);
-    console.log("displayCategory :: ", displayCategory);
-    console.log("displayCategoryView :: ", displayCategoryView);
-    console.log("contentData :: ", contentData);
-    console.log("contentData[activeCategory] :: ", contentData[activeCategory]);
-    console.log("navItems :: ", navItems);
+
     // Filtering logic (mocking subcategory data for demonstration)
     const filteredContent = contentData[activeCategory].filter((item) => {
         if (!activeSubCategory) return true;
