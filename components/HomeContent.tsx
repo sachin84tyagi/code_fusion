@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import ContentCard from "@/components/ContentCard";
 import TutorialView from "@/components/TutorialView";
 import { Sparkles } from "lucide-react";
-import { contentData } from "@/lib/constants";
+import { contentData, StaticKeys, navItems } from "@/lib/constants";
 
 interface HomeContentProps {
     tutorialContent: string | null;
@@ -14,12 +14,18 @@ interface HomeContentProps {
 
 export default function HomeContent({ tutorialContent }: HomeContentProps) {
     const searchParams = useSearchParams();
-    const activeCategory = (searchParams.get("category") as keyof typeof contentData) || "JS";
+
+    const activeCategory = (searchParams.get("category") as StaticKeys) || "JS";
     const activeSubCategory = searchParams.get("subCategory") || "";
     const displayCategory = contentData[activeCategory] ? activeCategory : "JS";
-
+    const displayCategoryView = navItems.find(item => item.name === activeCategory)?.value || "JS";
+    console.log("searchParams :: ", searchParams);
+    console.log("activeCategory :: ", activeCategory);
+    console.log("activeSubCategory :: ", activeSubCategory);
+    console.log("displayCategory :: ", displayCategory);
+    console.log("displayCategoryView :: ", displayCategoryView);
     // Filtering logic (mocking subcategory data for demonstration)
-    const filteredContent = contentData[displayCategory].filter((item) => {
+    const filteredContent = contentData[activeCategory].filter((item) => {
         if (!activeSubCategory) return true;
         // Simple mock matching for demonstration purposes
         return item.title.toLowerCase().includes(activeSubCategory.toLowerCase()) ||
@@ -34,14 +40,14 @@ export default function HomeContent({ tutorialContent }: HomeContentProps) {
             {/* Content Area */}
             <div className="flex-1 space-y-8">
                 {activeSubCategory && tutorialContent ? (
-                    <TutorialView category={displayCategory} title={activeSubCategory} content={tutorialContent} />
+                    <TutorialView category={displayCategoryView} title={activeSubCategory} content={tutorialContent} />
                 ) : (
                     <>
                         <header className="flex items-center justify-between border-b pb-4">
                             <div className="space-y-1">
                                 <h1 className="text-3xl font-bold tracking-tight text-foreground flex items-center gap-2">
                                     <Sparkles className="h-6 w-6 text-yellow-500" />
-                                    {displayCategory} {activeSubCategory ? `| ${activeSubCategory}` : "Articles"}
+                                    {displayCategoryView} {activeSubCategory ? `| ${activeSubCategory}` : "Articles"}
                                 </h1>
                                 <p className="text-muted-foreground">
                                     Explore our latest curated content about {displayCategory} {activeSubCategory && `> ${activeSubCategory}`}.
