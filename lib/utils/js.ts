@@ -1,0 +1,1 @@
+export const jsTopics: Array<string> = ["Introduction", "Variables & Data Types", "Functions", "Objects", "Test Types in JS"]

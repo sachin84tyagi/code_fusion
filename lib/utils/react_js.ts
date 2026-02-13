@@ -1,0 +1,1 @@
+export const reactTopics: Array<string> = ["Introduction", "Function", "Hooks", "Components", "State Management", "Routing"]

@@ -1,0 +1,1 @@
+export const pythonAITopics: Array<string> = ["Introduction", "Function", "Hooks", "Components", "State Management", "Routing"]

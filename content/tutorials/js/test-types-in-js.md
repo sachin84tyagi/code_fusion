@@ -1,0 +1,1 @@
+I am test type file in js for testing only
