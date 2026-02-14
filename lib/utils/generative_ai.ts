@@ -1,1 +1,1 @@
-export const generativeAITopics: Array<string> = ["Introduction", "Hooks", "Components", "State Management", "Routing"]
+export const generativeAITopics: Array<string> = ["Introduction", "120 Days Plan", "Overview", "Token", "Context Window", "Transformer"]
