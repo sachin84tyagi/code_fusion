@@ -1,1 +1,1 @@
-export const generativeAITopics: Array<string> = ["Introduction", "120 Days Plan", "Ultra Fastest Plan", "Fastest Plan", "Overview", "60 Days GenAi Foundations", "AI", "ML", "DL", "Generative AI", "LLM", "Transformer", "Tokens", "Embeddings", "Attention", "Context Window"]
+export const generativeAITopics: Array<string> = ["Introduction", "120 Days Plan", "Ultra Fastest Plan", "Fastest Plan", "Overview", "60 Days GenAi Foundations", "AI", "ML", "DL", "Generative AI", "LLM", "Token", "Embeddings", "Attention", "RNN", "Context Window", "Transformer"]
