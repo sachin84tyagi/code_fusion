@@ -58,8 +58,10 @@ export default function HomeContent({ tutorialContent }: HomeContentProps) {
                                     key={idx}
                                     title={content.title}
                                     description={content.description}
-                                    category={displayCategory}
+                                    category={displayCategoryView}
                                     date={content.date}
+                                    slug={content.title} // Or a specific slug mapping if available
+                                    activeCategoryKey={activeCategory}
                                 />
                             ))}
                         </div>

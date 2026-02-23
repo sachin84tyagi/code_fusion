@@ -5,7 +5,6 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { Menu, X, Rocket } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { BookOpen, Code2, Database, ChevronDown, Search, Check } from "lucide-react";
 import { navItems } from "@/lib/constants";
 
 function cn(...inputs: ClassValue[]) {
@@ -27,49 +26,57 @@ export default function Header() {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container mx-auto flex h-16 items-center justify-between px-4">
-                <div className="flex items-center gap-2">
-                    <Rocket className="h-6 w-6 text-primary" />
-                    <span className="text-xl font-bold tracking-tight">CodeFusion</span>
+        <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+            <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                <div
+                    className="flex items-center gap-2 cursor-pointer transition-transform hover:scale-[1.02]"
+                    onClick={() => router.push('/')}
+                >
+                    <div className="rounded-lg bg-primary/10 p-1.5 flex items-center justify-center">
+                        <Rocket className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-lg font-bold tracking-tight text-foreground">CodeFusion</span>
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-6">
+                <nav className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => (
                         <button
                             key={item.name}
                             onClick={() => handleNavClick(item.name)}
                             className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary",
-                                activeCategory === item.name ? "text-primary border-b-2 border-primary" : "text-muted-foreground"
+                                "relative text-sm font-medium transition-colors hover:text-foreground py-4",
+                                activeCategory === item.name ? "text-foreground" : "text-muted-foreground"
                             )}
                         >
                             {item.value}
+                            {activeCategory === item.name && (
+                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-t-full" />
+                            )}
                         </button>
                     ))}
                 </nav>
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden"
+                    className="md:hidden text-muted-foreground hover:text-foreground transition-colors p-2"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                 </button>
             </div>
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden border-b bg-background p-4 animate-in slide-in-from-top-1">
-                    <nav className="flex flex-col gap-4">
+                <div className="md:hidden border-b border-border/40 bg-background/95 backdrop-blur-md p-4 animate-in slide-in-from-top-2">
+                    <nav className="flex flex-col gap-2">
                         {navItems.map((item) => (
                             <button
                                 key={item.name}
                                 onClick={() => handleNavClick(item.name)}
                                 className={cn(
-                                    "text-left text-lg font-medium transition-colors hover:text-primary",
-                                    activeCategory === item.name ? "text-primary" : "text-muted-foreground"
+                                    "text-left px-4 py-3 rounded-xl text-base font-medium transition-colors hover:bg-secondary/50",
+                                    activeCategory === item.name ? "bg-secondary text-foreground" : "text-muted-foreground"
                                 )}
                             >
                                 {item.value}
