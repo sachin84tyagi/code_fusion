@@ -14,6 +14,36 @@ interface TutorialViewProps {
     category: string;
 }
 
+const MarkdownCode = ({ className, children, ...props }: any) => {
+    const isInsidePre = React.useContext(PreContext);
+    const isInline = !isInsidePre;
+    return isInline ? (
+        <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.85em] font-medium text-foreground relative -top-[1px]" {...props}>
+            {children}
+        </code>
+    ) : (
+        <code className={className} {...props}>
+            {children}
+        </code>
+    );
+};
+
+const MarkdownImage = ({ ...props }: any) => {
+    const { src, alt } = props;
+    if (!src) return null;
+
+    return (
+        <Image
+            src={src as string}
+            alt={alt || "Tutorial Image"}
+            width={1200}
+            height={630}
+            className="rounded-xl border border-border shadow-sm my-5 object-cover w-full h-auto"
+            loading="lazy"
+        />
+    );
+};
+
 export default function TutorialView({ content, title, category }: TutorialViewProps) {
     const [readingProgress, setReadingProgress] = useState(0);
 
@@ -86,19 +116,7 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                                 <div className="italic text-[13px] sm:text-sm lg:text-[15px] opacity-95 leading-relaxed font-medium">{props.children}</div>
                             </blockquote>
                         ),
-                        code: ({ className, children, ...props }) => {
-                            const isInsidePre = React.useContext(PreContext);
-                            const isInline = !isInsidePre;
-                            return isInline ? (
-                                <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.85em] font-medium text-foreground relative -top-[1px]" {...props}>
-                                    {children}
-                                </code>
-                            ) : (
-                                <code className={className} {...props}>
-                                    {children}
-                                </code>
-                            );
-                        },
+                        code: MarkdownCode,
                         pre: ({ children, ...props }) => (
                             <div className="relative my-4 group rounded-xl overflow-hidden border border-border/50 shadow-sm bg-[#1e1e1e]">
                                 {/* Mac OS Window Header */}
@@ -119,21 +137,7 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                                 </PreContext.Provider>
                             </div>
                         ),
-                        img: ({ ...props }) => {
-                            const { src, alt } = props;
-                            if (!src) return null;
-
-                            return (
-                                <Image
-                                    src={src as string}
-                                    alt={alt || "Tutorial Image"}
-                                    width={1200}
-                                    height={630}
-                                    className="rounded-xl border border-border shadow-sm my-5 object-cover w-full h-auto"
-                                    loading="lazy"
-                                />
-                            );
-                        },
+                        img: MarkdownImage,
                         hr: () => <hr className="my-6 border-border/50" />
                     }}
                 >
