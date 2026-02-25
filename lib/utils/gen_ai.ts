@@ -1,0 +1,1 @@
+export const genAITopics: Array<string> = ["Plan", "Tokens", "Embeddings", "Transformers", "Prompting"]
