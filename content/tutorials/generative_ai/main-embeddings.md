@@ -43,13 +43,13 @@ Let's plot some words:
 * **Toy Car:** (0, 8) — Not an animal, but kind of cute.
 * **Real Car:** (0, 1) — Not an animal, not cute.
 
-![A 2D graph plotting words like puppy, wolf, and car based on semantic traits](/path/to/your/2d-graph-image.png)
+![A 2D graph plotting words like puppy, wolf, and car based on semantic traits](/images/embeddings2D.png)
 
 If you look at the map, "Puppy" and "Wolf" are close together on the X-axis (they are related). "Puppy" and "Toy Car" are close on the Y-axis. 
 
 In real AI, we don't just use 2 traits (dimensions). A modern embedding model looks at hundreds or thousands of traits—many of which are concepts our human brains couldn't even name! It plots every word in a massive, multi-dimensional space. Words with similar meanings cluster together.
 
-![3D word embeddings showing semantic similarity in a vector space](/path/to/your/3d-vector-image.png)
+![3D word embeddings showing semantic similarity in a vector space](/images/embeddings3D.png)
 
 ---
 
