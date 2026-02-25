@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Sparkles, Clock, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 const PreContext = React.createContext(false);
 
@@ -118,9 +119,21 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                                 </PreContext.Provider>
                             </div>
                         ),
-                        img: ({ ...props }) => (
-                            <img className="rounded-xl border border-border shadow-sm my-5 object-cover w-full h-auto" loading="lazy" {...props} />
-                        ),
+                        img: ({ ...props }) => {
+                            const { src, alt } = props;
+                            if (!src) return null;
+
+                            return (
+                                <Image
+                                    src={src as string}
+                                    alt={alt || "Tutorial Image"}
+                                    width={1200}
+                                    height={630}
+                                    className="rounded-xl border border-border shadow-sm my-5 object-cover w-full h-auto"
+                                    loading="lazy"
+                                />
+                            );
+                        },
                         hr: () => <hr className="my-6 border-border/50" />
                     }}
                 >
