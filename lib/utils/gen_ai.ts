@@ -1,1 +1,1 @@
-export const genAITopics: Array<string> = ["Plan", "Tokens", "Embeddings", "Transformers", "Prompting"]
+export const genAITopics: Array<string> = ["Plan", "Tokens", "Embeddings", "Transformers", "Prompting", "Numpy Pandas", "Datasets", "Setup", "API Integration", "Completions", "Structured Output", "Project", "Prompt Strategies", "Role Prompting", "Hallucination Control", "AI Personal Assistant", "Vector Search", "Vector Database", "RAG Workflow", "Chunking Strategies", "Vector DB", "Chatbot Project"]
