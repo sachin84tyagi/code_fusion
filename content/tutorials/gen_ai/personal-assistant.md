@@ -78,6 +78,6 @@ solve_task("I want to organize a 3-day AI workshop for 50 students.")
 ## 3. Graduation Insight
 By using **XML tags**, you enable your software to "see" inside the AI's mind. You can show the `action_plan` to the user, but keep the `logic` hidden in your logs. This is how sophisticated AI software (like Auto-GPT or Devin) works under the hood.
 
-**Phase 4 is now officially COMPLETE!** You have mastered the art of "Programming with Words" 🚀🎓
+**Phase 4 is now officially COMPLETE!** You have mastered the art of "Programming with Words." 🚀🎓
 
 Next, we enter **Phase 5: Embeddings + Vector DB + RAG**. This is where we give the AI a **Long-Term Memory**! 🧠💾
