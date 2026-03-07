@@ -46,6 +46,145 @@ How?
 
 This allows the model to understand **meaning, context, grammar, and relationships**.
 
+🧠 The core idea of Transformers in a **very simple 5‑step flow**. The goal is to make the architecture easy for beginners to understand.
+
+---
+
+## ⚙️ Transformer in 5 Simple Boxes
+
+```
+Input Text
+   ↓
+Token Embeddings
+   ↓
+Self‑Attention
+   ↓
+Feed‑Forward Neural Network
+   ↓
+Output Prediction
+```
+
+---
+
+## 1️⃣ Input Text
+
+Example sentence:
+
+```
+The cat sat on the mat
+```
+
+The model first receives **raw text**.
+
+Computers cannot directly understand words, so the text must be converted into numbers.
+
+---
+
+## 2️⃣ Token Embeddings
+
+Each word is converted into a **vector of numbers**.
+
+Example:
+
+```
+cat → [0.21, 0.45, 0.87]
+sat → [0.64, 0.12, 0.53]
+mat → [0.91, 0.33, 0.77]
+```
+
+This step turns language into **mathematical representations** that the model can process.
+
+---
+
+## 3️⃣ Self‑Attention (Core Idea)
+
+Each word **looks at every other word** in the sentence to understand context.
+
+Example:
+
+```
+The cat sat on the mat
+```
+
+The word **"sat"** focuses more on:
+
+* **cat** → who sat
+* **mat** → where
+
+The model calculates **attention scores** to determine which words matter the most.
+
+---
+
+## 4️⃣ Feed‑Forward Neural Network
+
+After attention, each token passes through a **small neural network**.
+
+This step helps the model:
+
+* refine meaning
+* detect patterns
+* improve predictions
+
+---
+
+## 5️⃣ Output Prediction
+
+Finally, the model produces a prediction.
+
+Examples:
+
+* Next word prediction
+* Translation
+* Question answering
+* Summarization
+
+Example:
+
+```
+The cat sat on the
+        ↓
+       mat
+```
+
+---
+
+## 🔁 Important Detail: Layer Stacking
+
+Transformers stack many layers to build deeper understanding.
+
+Example:
+
+```
+Transformer Layer × 12
+Transformer Layer × 24
+Transformer Layer × 96
+```
+
+More layers → deeper contextual understanding.
+
+---
+
+## ⚡ 10‑Second Summary
+
+```
+Text
+ ↓
+Numbers
+ ↓
+Words attend to each other
+ ↓
+Neural processing
+ ↓
+Prediction
+```
+
+---
+
+## 🧩 One‑Line Takeaway
+
+**Transformers convert text into numbers, let words attend to each other for context, process them through neural layers, and produce predictions.**
+
+
 ---
 
 ## 4. Transformer Architecture (Big Picture)

@@ -1,13 +1,15 @@
 # Phase 1: Foundations - Step 3 (Transformers)
 
-You've learned about **Tokens** (words as numbers) and **Embeddings** (meaning as coordinates). Now, let's look at the "Engine" that actually processes these ingredients: **The Transformer**.
+You've learned about **Tokens** (words as [words]) and **Embeddings** (meaning as coordinates). Now, let's look at the "Engine" that actually processes these ingredients: **The Transformer**.
 
 ---
 
 ## 1. Simple Explanation
-The **Transformer** is a revolutionary AI architecture invented in 2017. Before it existed, AI read sentences like a human—word by word from left to right. If a sentence was long, the AI would "forget" the beginning by the time it reached the end.
+The **Transformer** is a revolutionary AI architecture invented in 2017. They understand context much better than older AI models. Before it existed, AI read sentences like a human—word by word from left to right. If a sentence was long, the AI would "forget" the beginning by the time it reached the end.
 
-The Transformer changed everything by reading the **entire sentence all at once**. It focus on which words "refer" to each other, no matter how far apart they are.
+The Transformer changed everything by reading the **entire sentence or paragraphs all at once**. It focus on which words "refer" to each other, no matter how far apart they are.
+
+Transformers are an AI model architecture that helps computers understand language by looking at relationships between all words in a sentence at the same time.
 
 ## 2. Visual Intuition: The "Party Conversation"
 Imagine you are at a crowded party. There are 20 people talking.
@@ -15,6 +17,21 @@ Imagine you are at a crowded party. There are 20 people talking.
 - **Transformer (with Attention):** You are talking to a friend. Even though 19 other people are making noise, your brain "attends" only to your friend's voice. You filter out the junk and focus on the important parts.
 
 In a sentence, the Transformer does exactly this. It uses a mechanism called **"Self-Attention"** to decide which words are most important to the current word.
+
+```
+Text
+  ↓
+Tokenization
+  ↓
+Embeddings
+  ↓
+Self‑Attention (Transformer)
+  ↓
+AI understands context
+  ↓
+Output (Answer / Text)
+```
+![Transformers image](/images/transformers.png)
 
 ## 3. Real-world Example: "The bank of the river"
 Look at these two sentences:

@@ -1,0 +1,10 @@
+export const typescriptTopics: Array<string> = ["Introduction", "Types & Interfaces", "Generics", "Decorators", "Configuration"];
+export const nextjsTopics: Array<string> = ["App Router", "Server Components", "Data Fetching", "Middleware", "Optimization"];
+export const nodejsTopics: Array<string> = ["Event Loop", "Streams", "Buffer", "File System", "Clustering"];
+export const tailwindTopics: Array<string> = ["JIT Engine", "Custom Configuration", "Responsive Design", "Dark Mode", "Plugins"];
+export const dsaTopics: Array<string> = ["Arrays & Hashing", "Linked Lists", "Trees & Graphs", "Dynamic Programming", "Sorting"];
+export const algorithmsTopics: Array<string> = ["Time Complexity", "Search Algorithms", "Recursion", "Backtracking", "Greedy Algorithms"];
+export const dockerTopics: Array<string> = ["Images & Containers", "Docker Compose", "Volumes", "Networking", "Multi-stage Builds"];
+export const k8sTopics: Array<string> = ["Pods", "Services", "Deployments", "Ingress", "ConfigMaps & Secrets"];
+export const awsTopics: Array<string> = ["EC2", "S3", "Lambda", "IAM", "VPC"];
+export const cyberTopics: Array<string> = ["OWASP Top 10", "Network Security", "Cryptography", "Penetration Testing", "Security Auditing"];

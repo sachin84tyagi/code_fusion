@@ -39,23 +39,29 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-8">
-                    {navItems.map((item) => (
-                        <button
-                            key={item.name}
-                            onClick={() => handleNavClick(item.name)}
-                            className={cn(
-                                "relative text-sm font-medium transition-colors hover:text-foreground py-4",
-                                activeCategory === item.name ? "text-foreground" : "text-muted-foreground"
-                            )}
-                        >
-                            {item.value}
-                            {activeCategory === item.name && (
-                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-t-full" />
-                            )}
-                        </button>
-                    ))}
-                </nav>
+                <div className="hidden md:flex flex-1 items-center justify-center max-w-[calc(100%-200px)] px-4">
+                    <div className="relative w-full overflow-hidden mask-horizontal">
+                        <nav className="flex items-center gap-6 overflow-x-auto scrollbar-hide py-1 px-4">
+                            {navItems.map((item) => (
+                                <button
+                                    key={item.name}
+                                    onClick={() => handleNavClick(item.name)}
+                                    className={cn(
+                                        "relative whitespace-nowrap text-sm font-medium transition-all hover:text-foreground py-2 px-1",
+                                        activeCategory === item.name
+                                            ? "text-foreground"
+                                            : "text-muted-foreground hover:scale-105"
+                                    )}
+                                >
+                                    {item.value}
+                                    {activeCategory === item.name && (
+                                        <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full animate-in fade-in zoom-in duration-300" />
+                                    )}
+                                </button>
+                            ))}
+                        </nav>
+                    </div>
+                </div>
 
                 {/* Mobile Toggle */}
                 <button

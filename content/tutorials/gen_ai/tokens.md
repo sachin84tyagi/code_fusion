@@ -2,10 +2,67 @@
 
 Before we call an API, we need to speak the language of AI: **Tokens**.
 
-### 1. What are Tokens?
-AI doesn't see "Hello". It sees numbers. The process of turning text into numbers is **Tokenization**.
+## 1. What are Tokens?
 
-### 2. The Coding Exercise
+#### 1️⃣ Simple Definition
+
+**AI Tokens** are **small pieces of text** (words, parts of words, or symbols) that an AI reads and processes to understand language.
+
+#### 2️⃣ Why Tokens Matter
+
+* AI **cannot read full sentences directly**.
+* It **breaks text into tokens** first.
+* The model **understands and predicts using these tokens**.
+
+#### 3️⃣ Example: Sentence → Tokens
+
+Sentence:
+
+```
+"AI is very powerful"
+```
+
+Step-by-step tokens:
+
+```
+AI | is | very | power | ful
+```
+
+AI processes **each token separately** to understand meaning.
+
+
+#### 4️⃣ Visual AI Diagram
+
+```
+User Sentence
+     │
+     ▼
+"AI is very powerful"
+     │
+     ▼
+Split into Words
+AI | is | very | powerful
+     │
+     ▼
+Split into Tokens
+AI | is | very | power | ful
+     │
+     ▼
+AI Model (LLM)
+Processes tokens → Understands meaning → Generates response
+```
+
+#### 5️⃣ Real-Life Analogy (Lego Blocks)
+
+* A **sentence is like a Lego house**.
+**Tokens are the Lego blocks.**
+
+* AI **builds and understands language by connecting these small blocks together.**
+
+![Token image](/images/tokens.jpeg)
+---
+
+## 2. The Coding Exercise
 Since you want to use **Python**, we will use a library called `tiktoken` (developed by OpenAI) to see how our words are chopped up.
 
 #### Step 1: Install the library
