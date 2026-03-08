@@ -7,7 +7,9 @@ In the AI world, we don't just use standard Python lists. We use **NumPy** and *
 ---
 
 ## 1. NumPy: The Language of Tensors
-AI models (like the Transformers we studied) think in "tensors"—which are just fancy multi-dimensional arrays. 
+AI models (like the Transformers we studied) think in "tensors"—which are just fancy multi-dimensional arrays.
+
+NumPy is a Python library for very fast math using arrays of numbers.
 
 **Why NumPy?**
 - **Speed:** Standard Python lists are slow. NumPy is written in C and is lightning fast.
@@ -16,13 +18,69 @@ AI models (like the Transformers we studied) think in "tensors"—which are just
 ## 2. Pandas: The AI Spreadsheet
 If NumPy is for math, **Pandas** is for organization. It gives us a `DataFrame`, which is basically a supercharged Excel spreadsheet inside Python.
 
+Pandas is a Python library for analyzing data using table-like structures (similar to Excel).
+
 **Why Pandas?**
 - **Cleaning:** AI needs clean data. Pandas helps you remove duplicates, fix missing text, and format JSON/CSV files.
 - **Preparation:** Before we send text to an LLM, we often use Pandas to "chunk" it or structure it.
 
 ---
+## 3. NumPy vs Pandas
 
-## 3. The Coding Exercise (Hands-on)
+| Feature   | NumPy                | Pandas             |
+| --------- | -------------------- | ------------------ |
+| Data Type | Arrays               | Tables (DataFrame) |
+| Best For  | Fast math operations | Data analysis      |
+
+---
+
+```
+Raw Data
+   ↓
+NumPy
+(Fast numerical arrays)
+   ↓
+Pandas
+(Structured data tables)
+   ↓
+Data Analysis
+   ↓
+Machine Learning / AI
+```
+
+---
+
+## 4. The Coding Exercise (Hands-on)
+
+### NumPy Example
+
+```python
+import numpy as np
+
+arr = np.array([1,2,3,4])
+print(arr * 2)
+```
+
+**Output:** Each number in the array is multiplied by 2.
+
+### Pandas Example
+
+```python
+import pandas as pd
+
+data = {
+    "Name": ["Aman","Riya","Raj"],
+    "Age": [22,23,21]
+}
+
+
+df = pd.DataFrame(data)
+print(df)
+```
+
+**Output:** Shows the data as a table with Name and Age columns.
+
+---
 
 We are going to simulate a tiny AI dataset: a list of sentences and their "simulated" embedding scores.
 
@@ -78,7 +136,7 @@ print(df)
 
 ---
 
-## 4. Why this matters for your AI journey
+## 5. Why this matters for your AI journey
 Soon, you will be making API calls to OpenAI or Claude. They often return data in JSON format. You will use **Pandas** to turn that JSON into a clean table and **NumPy** to handle the heavy mathematical similarity checks.
 
 ---
