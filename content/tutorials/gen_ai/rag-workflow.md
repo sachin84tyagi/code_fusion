@@ -88,3 +88,57 @@ This is how **enterprise search** works. When you ask a bot inside a big company
 - **Grounding:** Giving the AI a "Source of Truth" to stop hallucinations.
 
 **Next Step:** Once you run this, we'll build the Phase 5 Capstone: [Project: Chat with your PDF](file:///d:/myFirstAITest/Phase5/phase5_project.md). 🚀
+
+## 4. Extra Examples
+
+```python
+from sentence_transformers import SentenceTransformer
+import chromadb
+from openai import OpenAI
+
+# 1. Setup Clients
+embed_model = SentenceTransformer('all-MiniLM-L6-v2')
+vector_db = chromadb.Client()
+
+
+
+# 2. Prepare our "Knowledge"
+collection = vector_db.get_or_create_collection("my_documents_base")
+collection.add(
+    documents=["The Secret Sauce uses 2 cups of sugar, 1 cup of vinegar, and secret spice X."],
+    ids=["recipe_01"]
+)
+
+def run_rag(user_query):
+    print(f"\n[USER]: {user_query}")
+
+    # --- STEP 1: RETRIEVE ---
+    results = collection.query(query_texts=[user_query], n_results=1)
+    retrieved_context = results['documents'][0][0]
+    print(f"✅ Retrieved Context: {retrieved_context}")
+
+    # --- STEP 2: AUGMENT ---
+    # We build a 'Super-Prompt' that includes the secret knowledge
+    rag_prompt = f"""
+    Use the following CONTEXT to answer the user's question.
+    If the answer is not in the context, say 'I do not know'.
+    
+    CONTEXT: {retrieved_context}
+    USER QUESTION: {user_query}
+    """
+
+    # --- STEP 3: GENERATE ---
+    if USE_MOCK:
+        ai_reply = f"MOCK: To make the Secret Sauce, you need {retrieved_context.split('uses ')[1]}"
+    else:
+        response = client_ai.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": rag_prompt}]
+        )
+        ai_reply = response.choices[0].message.content
+
+    print(f"\n[FINAL AI ANSWER]:\n{ai_reply}")
+
+# Test the RAG Loop
+run_rag("What are the ingredients for the Secret Sauce?")
+```
