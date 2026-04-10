@@ -1,0 +1,1 @@
+export const agenticAITopics: Array<string> = ["Introduction", "LLM & Tool Calling", "Environment & Tools Setup", "Chapter 4"]
