@@ -1,1 +1,1 @@
-export const agenticAITopics: Array<string> = ["Introduction", "LLM & Tool Calling", "Environment & Tools Setup", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12", "Ollama Guide"]
+export const agenticAITopics: Array<string> = ["Introduction", "LLM & Tool Calling", "Environment & Tools Setup", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12", "Ollama Guide", "MCP Overview", "Practical-01", "Practical-02-web-apps"]
