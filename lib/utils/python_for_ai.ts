@@ -1,1 +1,1 @@
-export const pythonAITopics: Array<string> = ["Introduction", "Function", "Hooks", "Components", "State Management", "Routing"]
+export const pythonAITopics: Array<string> = ["Introduction", "Variables & Data Types", "Functions As Tools", "Agent Logic", "Agent Memory", "Agent Senses (APIs)", "Agent (Classes)", "Unbreakable Agent", "Vector Memory", "Agent Dashboard"]
