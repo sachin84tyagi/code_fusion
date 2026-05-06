@@ -7,6 +7,8 @@ import { generativeAITopics } from "./utils/generative_ai";
 import { genAITopics } from "./utils/gen_ai";
 import { promptEngTopics } from "./utils/prompt_engineering";
 import { agenticAITopics } from "./utils/agentic_ai";
+import { langChainAITopics } from "./utils/lang_chain";
+//import { langGraphAITopics } from "./utils/langgraph";
 import {
   typescriptTopics, nextjsTopics, nodejsTopics, tailwindTopics,
   dsaTopics, algorithmsTopics, dockerTopics, k8sTopics,
@@ -22,6 +24,8 @@ export const navItems = [
   { name: "generative_ai", value: "Generative AI", link: generativeAITopics, icon: Database },
   { name: "gen_ai", value: "Gen AI", link: genAITopics, icon: Database },
   { name: "agentic_ai", value: "Agentic AI", link: agenticAITopics, icon: Database },
+  { name: "lang_chain", value: "Langchain", link: langChainAITopics, icon: Database },
+  //{ name: "langgraph", value: "Langgraph", link: langGraphAITopics, icon: Database },
   { name: "typescript", value: "TypeScript", link: typescriptTopics, icon: Code2 },
   { name: "nextjs", value: "Next.js", link: nextjsTopics, icon: Globe },
   { name: "nodejs", value: "Node.js", link: nodejsTopics, icon: Server },
@@ -78,6 +82,10 @@ export const contentData = {
   ],
   "agentic_ai": [
     { title: "Introduction", description: "An overview of Agentic AI and Large Language Models.", date: "Feb 01, 2026" },
+    { title: "Functions", description: "Building reusable logic with Python functions and decorators.", date: "Feb 06, 2026" },
+  ],
+  "lang_chain": [
+    { title: "Introduction", description: "An overview of Langchain and Large Language Models.", date: "Feb 01, 2026" },
     { title: "Functions", description: "Building reusable logic with Python functions and decorators.", date: "Feb 06, 2026" },
   ],
   "typescript": [

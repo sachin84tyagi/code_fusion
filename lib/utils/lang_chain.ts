@@ -1,0 +1,1 @@
+export const langChainAITopics: Array<string> = ["Introduction", "Fundamentals", "SetUp", "Models", "Prompt", "Chains", "Memory", "Tools", "Agents", "RAG", "Lang Graph", "Projects", "Advanced Concepts", "Production"]
