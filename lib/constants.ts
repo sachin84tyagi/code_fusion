@@ -9,6 +9,7 @@ import { promptEngTopics } from "./utils/prompt_engineering";
 import { agenticAITopics } from "./utils/agentic_ai";
 import { langChainAITopics } from "./utils/lang_chain";
 import { langGraphAITopics } from "./utils/lang_graph";
+import { ragAITopics } from "./utils/rag";
 import {
   typescriptTopics, nextjsTopics, nodejsTopics, tailwindTopics,
   dsaTopics, algorithmsTopics, dockerTopics, k8sTopics,
@@ -23,6 +24,7 @@ export const navItems = [
   { name: "prompt_engineering", value: "Prompt Engineering", link: promptEngTopics, icon: Database },
   { name: "generative_ai", value: "Generative AI", link: generativeAITopics, icon: Database },
   { name: "gen_ai", value: "Gen AI", link: genAITopics, icon: Database },
+  { name: "rag", value: "RAG", link: ragAITopics, icon: Database },
   { name: "agentic_ai", value: "Agentic AI", link: agenticAITopics, icon: Database },
   { name: "lang_chain", value: "Langchain", link: langChainAITopics, icon: Database },
   { name: "lang_graph", value: "Langgraph", link: langGraphAITopics, icon: Database },
@@ -79,6 +81,10 @@ export const contentData = {
     { title: "Embeddings", description: "Understanding the Scaled Dot-Product Attention mechanism.", date: "Feb 06, 2026" },
     { title: "Transformers", description: "An overview of Generative AI and Large Language Models.", date: "Feb 01, 2026" },
     { title: "Prompting", description: "An overview of Prompting and Large Language Models.", date: "Feb 01, 2026" },
+  ],
+  "rag": [
+    { title: "Introduction", description: "An overview of RAG and Large Language Models.", date: "Feb 01, 2026" },
+    { title: "Fundamentals", description: "Building reusable logic with Python functions and decorators.", date: "Feb 06, 2026" },
   ],
   "agentic_ai": [
     { title: "Introduction", description: "An overview of Agentic AI and Large Language Models.", date: "Feb 01, 2026" },
