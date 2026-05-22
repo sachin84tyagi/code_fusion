@@ -1,4 +1,4 @@
-import { BookOpen, Code2, Database, Shield, Server, Cpu, Layout, Globe, Box, Workflow, Cloud, Lock } from "lucide-react";
+import { BookOpen, Code2, Database, Shield, Server, Cpu, Layout, Globe, Box, Workflow, Cloud, Lock, Dumbbell } from "lucide-react";
 import { jsTopics } from "./utils/js";
 import { reactTopics } from "./utils/react_js";
 import { pythonTopics } from "./utils/python";
@@ -15,6 +15,7 @@ import {
   dsaTopics, algorithmsTopics, dockerTopics, k8sTopics,
   awsTopics, cyberTopics
 } from "./utils/dev_docs";
+import { excerciseTopics } from "./utils/excercise";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
@@ -38,6 +39,7 @@ export const navItems = [
   { name: "k8s", value: "Kubernetes", link: k8sTopics, icon: Server },
   { name: "aws", value: "AWS", link: awsTopics, icon: Cloud },
   { name: "cybersecurity", value: "Cybersecurity", link: cyberTopics, icon: Lock },
+  { name: "gym", value: "Gym", link: excerciseTopics, icon: Dumbbell },
 ] as const;
 
 type NavItem = typeof navItems[number];
@@ -130,5 +132,8 @@ export const contentData = {
   ],
   "cybersecurity": [
     { title: "OWASP Top 10", description: "The most critical web security risks.", date: "Mar 07, 2026" },
+  ],
+  "gym": [
+    { title: "Fundamentals", description: "Introduction to Gym and workout plans.", date: "Mar 07, 2026" },
   ],
 };

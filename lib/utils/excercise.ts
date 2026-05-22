@@ -1,0 +1,1 @@
+export const excerciseTopics: Array<string> = ["Fundamental"]
