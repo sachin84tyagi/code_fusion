@@ -15,7 +15,7 @@ import {
   dsaTopics, algorithmsTopics, dockerTopics, k8sTopics,
   awsTopics, cyberTopics
 } from "./utils/dev_docs";
-import { excerciseTopics } from "./utils/excercise";
+import { excerciseTopics } from "./utils/gym";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
