@@ -1,7 +1,6 @@
-# 💪 90-Day Sustainable Transformation Plan — Plan 2
+# 💪 90-Day Sustainable Transformation Plan — Plan
 ### Low-Volume · Short Workouts · Light Diet · Long-Term Consistency
 
-> **Designed for:** 40-year-old skinny-fat vegetarian man | Low appetite | Low energy | Home workout only
 > **Philosophy:** *"Slow aur steady = sustainable aur permanent results"*
 
 ---
