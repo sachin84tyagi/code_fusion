@@ -1,1 +1,1 @@
-export const pythonTopics: Array<string> = ["List Comprehensions", "Decorators", "Deltas", "Context Managers"]
+export const pythonTopics: Array<string> = ["List Comprehensions", "Decorators", "Deltas", "Context Managers", "Planner"]
