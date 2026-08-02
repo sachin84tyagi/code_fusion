@@ -8,7 +8,7 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+                sans: ['var(--font-outfit)', 'Outfit', 'sans-serif'],
                 mono: ['var(--font-jetbrains-mono)', 'monospace'],
             },
             colors: {

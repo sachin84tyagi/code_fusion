@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import MainLayout from "@/components/MainLayout";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+            <body className={`${outfit.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
                 <Suspense fallback={null}>
                     <MainLayout>
                         {children}

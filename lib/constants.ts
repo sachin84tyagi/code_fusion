@@ -15,11 +15,21 @@ import {
   dsaTopics, algorithmsTopics, dockerTopics, k8sTopics,
   awsTopics, cyberTopics
 } from "./utils/dev_docs";
+import { nodeTopics } from "./utils/node";
+import { expressTopics } from "./utils/express";
+import { mongoTopics } from "./utils/mongo";
 import { excerciseTopics } from "./utils/gym";
+import { springTopics } from "./utils/spring";
+import { javaTopics } from "./utils/java";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
   { name: "react_js", value: "React JS", link: reactTopics, icon: BookOpen },
+  { name: "java", value: "Java", link: javaTopics, icon: BookOpen },
+  { name: "spring", value: "Spring", link: springTopics, icon: BookOpen },
+  { name: "node", value: "Node JS", link: nodeTopics, icon: BookOpen },
+  { name: "express", value: "Express", link: expressTopics, icon: BookOpen },
+  { name: "mongo", value: "Mongo", link: mongoTopics, icon: BookOpen },
   { name: "python", value: "Python", link: pythonTopics, icon: Database },
   { name: "python_for_ai", value: "Python for AI", link: pythonAITopics, icon: Database },
   { name: "prompt_engineering", value: "Prompt Engineering", link: promptEngTopics, icon: Database },
@@ -60,6 +70,61 @@ export const contentData = {
   "react_js": [
     { title: "Introduction", description: "Core concepts of React: components, props, and state.", date: "Feb 11, 2026" },
     { title: "Mastering Hooks", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+  ],
+  "spring": [
+    { title: "Introduction", description: "Core concepts of Spring: components, props, and state.", date: "Feb 11, 2026" },
+    { title: "Core", description: "A comprehensive guide to Spring Core: components, props, and state.", date: "Feb 08, 2026" },
+    { title: "MVC", description: "A comprehensive guide to Spring MVC: components, props, and state.", date: "Feb 08, 2026" },
+    { title: "Security", description: "A comprehensive guide to Spring Security: components, props, and state.", date: "Feb 08, 2026" },
+    { title: "Data", description: "A comprehensive guide to Spring Data: components, props, and state.", date: "Feb 08, 2026" },
+    { title: "Boot", description: "A comprehensive guide to Spring Boot: components, props, and state.", date: "Feb 08, 2026" },
+  ],
+  "java": [
+    { title: "Introduction", description: "Getting started with Java and OOP concepts.", date: "Feb 12, 2026" },
+  ],
+  "node": [
+    { title: "Introduction", description: "Core concepts of React: components, props, and state.", date: "Feb 11, 2026" },
+    { title: "Architecture", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Event Loop", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "EventEmitter", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Modules", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "CommonJS", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "NPM", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Package Json", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "File System", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Buffers", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Streams", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Read Stream", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Write Stream", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Process Object", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Global Objects", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Environment Variables", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "require()", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "exports", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "module.exports", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Cluster", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Worker Threads", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+  ],
+  "express": [
+    { title: "Introduction", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+  ],
+  "mongo": [
+    { title: "Introduction", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Collection", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Document", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "BSON", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "CRUD", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Index", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Compound Index", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Aggregation", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "$match", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "$group", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "$lookup", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Mongoose", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Schema", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "populate()", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Transactions", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
+    { title: "Sharding", description: "A comprehensive guide to useEffect, useState, and custom hooks.", date: "Feb 08, 2026" },
   ],
   "python": [
     { title: "Introduction", description: "Start your Python journey with basic syntax and data structures.", date: "Feb 09, 2026" },

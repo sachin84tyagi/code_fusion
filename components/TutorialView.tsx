@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Sparkles, Clock, CheckCircle2 } from "lucide-react";
+import { Sparkles, Clock, CheckCircle2, Maximize, Minimize } from "lucide-react";
 import Image from "next/image";
 
 const PreContext = React.createContext(false);
@@ -46,6 +46,20 @@ const MarkdownImage = ({ ...props }: any) => {
 
 export default function TutorialView({ content, title, category }: TutorialViewProps) {
     const [readingProgress, setReadingProgress] = useState(0);
+    const [isFullScreen, setIsFullScreen] = useState(false);
+    const [isExiting, setIsExiting] = useState(false);
+
+    const toggleFullScreen = () => {
+        if (isFullScreen) {
+            setIsExiting(true);
+            setTimeout(() => {
+                setIsFullScreen(false);
+                setIsExiting(false);
+            }, 250);
+        } else {
+            setIsFullScreen(true);
+        }
+    };
 
     // Calculate reading time (avg 200 words per minute)
     const wordCount = content.trim().split(/\s+/).length;
@@ -65,41 +79,71 @@ export default function TutorialView({ content, title, category }: TutorialViewP
     }, []);
 
     return (
-        <article className="relative w-full">
-            {/* Reading Progress Bar */}
-            <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
-                <div
-                    className="h-full bg-primary transition-all duration-150 ease-out"
-                    style={{ width: `${readingProgress}%` }}
-                />
-            </div>
-
-            <header className="mb-6 lg:mb-8 space-y-3">
-                <div className="flex items-center gap-2 text-[10px] font-bold text-primary bg-primary/10 w-fit px-2.5 py-1 rounded-full uppercase tracking-wider">
-                    <Sparkles className="h-3 w-3" />
-                    <span>{category} Tutorial</span>
+        <>
+            <style>{`
+                @keyframes fullScreenPopIn {
+                    0% { opacity: 0; transform: scale(0.97) translateY(10px); }
+                    100% { opacity: 1; transform: scale(1) translateY(0); }
+                }
+                @keyframes fullScreenPopOut {
+                    0% { opacity: 1; transform: scale(1) translateY(0); }
+                    100% { opacity: 0; transform: scale(0.97) translateY(10px); }
+                }
+                .fs-enter {
+                    animation: fullScreenPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+                .fs-exit {
+                    animation: fullScreenPopOut 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+            `}</style>
+            <article className={isFullScreen ? `fixed inset-0 z-[100] bg-background overflow-y-auto p-4 sm:p-8 md:p-12 block ${isExiting ? 'fs-exit' : 'fs-enter'}` : "relative w-full transition-all duration-300"}>
+                <div className="w-full min-h-full bg-background">
+                {/* Reading Progress Bar */}
+                <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
+                    <div
+                        className="h-full bg-primary transition-all duration-150 ease-out"
+                        style={{ width: `${readingProgress}%` }}
+                    />
                 </div>
 
-                <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
-                    {title || "Untitled Article"}
-                </h1>
-
-                <div className="flex items-center gap-4 text-muted-foreground text-xs font-medium">
-                    <div className="flex items-center gap-1.5 font-semibold">
-                        <Clock className="h-4 w-4" />
-                        <span>{readingTime} min read</span>
+                <header className="mb-6 lg:mb-8 space-y-3">
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-primary bg-primary/10 w-fit px-2.5 py-1 rounded-full uppercase tracking-wider">
+                            <Sparkles className="h-3 w-3" />
+                            <span>{category} Tutorial</span>
+                        </div>
+                        <button 
+                            onClick={toggleFullScreen}
+                            className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors bg-secondary/50 px-3 py-1.5 rounded-md"
+                        >
+                            {isFullScreen ? (
+                                <><Minimize className="h-3.5 w-3.5" /> <span>Exit Full Screen</span></>
+                            ) : (
+                                <><Maximize className="h-3.5 w-3.5" /> <span>Read in Full Screen</span></>
+                            )}
+                        </button>
                     </div>
-                </div>
-            </header>
 
-            <div className="prose prose-slate dark:prose-invert max-w-[75ch] w-full">
+                    <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
+                        {title || "Untitled Article"}
+                    </h1>
+
+                    <div className="flex items-center gap-4 text-muted-foreground text-xs font-medium">
+                        <div className="flex items-center gap-1.5 font-semibold">
+                            <Clock className="h-4 w-4" />
+                            <span>{readingTime} min read</span>
+                        </div>
+                    </div>
+                </header>
+
+            <div className={`prose prose-slate dark:prose-invert w-full ${isFullScreen ? 'max-w-none' : 'max-w-[75ch]'}`}>
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
                         h1: ({ ...props }) => <h1 className="text-xl font-bold mt-6 mb-3 text-foreground tracking-tight" {...props} />,
-                        h2: ({ ...props }) => <h2 className="text-lg font-semibold mt-6 mb-2 text-foreground border-b border-border/40 pb-1 tracking-tight flex items-center gap-2 group" {...props} />,
-                        h3: ({ ...props }) => <h3 className="text-base font-medium mt-4 mb-1.5 text-foreground tracking-tight" {...props} />,
-                        p: ({ ...props }) => <p className="leading-relaxed text-muted-foreground mb-3 text-[13px] sm:text-sm lg:text-[15px]" {...props} />,
+                        h2: ({ ...props }) => <h2 className="text-lg font-semibold !mt-4 !mb-1 text-foreground border-b border-border/40 pb-1 tracking-tight flex items-center gap-2 group" {...props} />,
+                        h3: ({ ...props }) => <h3 className="text-base font-medium !mt-2 !mb-1 text-foreground tracking-tight" {...props} />,
+                        p: ({ ...props }) => <p className="leading-tight text-muted-foreground !mb-1 !mt-0 text-[13px] sm:text-sm lg:text-[15px]" {...props} />,
                         a: ({ ...props }) => <a className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-all" {...props} />,
                         strong: ({ ...props }) => <strong className="font-semibold text-foreground" {...props} />,
                         ul: ({ ...props }) => <ul className="my-3 ml-5 list-none space-y-1.5 text-muted-foreground text-[13px] sm:text-sm lg:text-[15px]" {...props} />,
@@ -138,7 +182,7 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                             </div>
                         ),
                         img: MarkdownImage,
-                        hr: () => <hr className="my-6 border-border/50" />
+                        hr: () => <hr className="!my-3 border-border/50" />
                     }}
                 >
                     {content}
@@ -151,6 +195,8 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                     <span className="font-medium">You reached the end of this tutorial.</span>
                 </div>
             </div>
-        </article>
+            </div>
+            </article>
+        </>
     );
 }
