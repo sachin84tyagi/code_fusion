@@ -18,15 +18,19 @@ import {
 import { nodeTopics } from "./utils/node";
 import { expressTopics } from "./utils/express";
 import { mongoTopics } from "./utils/mongo";
+import { dockerTopics as dockerTutorialTopics } from "./utils/docker";
 import { excerciseTopics } from "./utils/gym";
 import { springTopics } from "./utils/spring";
 import { javaTopics } from "./utils/java";
+import { cicdTopics } from "./utils/cicd";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
   { name: "react_js", value: "React JS", link: reactTopics, icon: BookOpen },
   { name: "java", value: "Java", link: javaTopics, icon: BookOpen },
   { name: "spring", value: "Spring", link: springTopics, icon: BookOpen },
+  { name: "cicd", value: "CICD", link: cicdTopics, icon: Box },
+  { name: "docker", value: "Docker", link: dockerTutorialTopics, icon: Box },
   { name: "node", value: "Node JS", link: nodeTopics, icon: BookOpen },
   { name: "express", value: "Express", link: expressTopics, icon: BookOpen },
   { name: "mongo", value: "Mongo", link: mongoTopics, icon: BookOpen },
@@ -45,7 +49,6 @@ export const navItems = [
   { name: "tailwind", value: "Tailwind CSS", link: tailwindTopics, icon: Layout },
   { name: "dsa", value: "Data Structures", link: dsaTopics, icon: Cpu },
   { name: "algorithms", value: "Algorithms", link: algorithmsTopics, icon: Workflow },
-  { name: "docker", value: "Docker", link: dockerTopics, icon: Box },
   { name: "k8s", value: "Kubernetes", link: k8sTopics, icon: Server },
   { name: "aws", value: "AWS", link: awsTopics, icon: Cloud },
   { name: "cybersecurity", value: "Cybersecurity", link: cyberTopics, icon: Lock },
@@ -81,6 +84,9 @@ export const contentData = {
   ],
   "java": [
     { title: "Introduction", description: "Getting started with Java and OOP concepts.", date: "Feb 12, 2026" },
+  ],
+  "cicd": [
+    { title: "Introduction", description: "Core concepts of CICD: components, props, and state.", date: "Feb 11, 2026" },
   ],
   "node": [
     { title: "Introduction", description: "Core concepts of React: components, props, and state.", date: "Feb 11, 2026" },
@@ -187,7 +193,21 @@ export const contentData = {
     { title: "Time Complexity", description: "How to measure algorithm performance.", date: "Mar 07, 2026" },
   ],
   "docker": [
-    { title: "Containers vs VMs", description: "The fundamental differences.", date: "Mar 07, 2026" },
+    { title: "Introduction", description: "What Docker is, why it matters, and how to install it.", date: "Aug 03, 2026" },
+    { title: "Containers vs VMs", description: "The fundamental difference between containers and virtual machines.", date: "Aug 03, 2026" },
+    { title: "Docker Architecture", description: "Client, Daemon, and Registry — how Docker works internally.", date: "Aug 03, 2026" },
+    { title: "Images", description: "Docker images, layers, caching, and image commands.", date: "Aug 03, 2026" },
+    { title: "Dockerfile", description: "Writing Dockerfiles with FROM, RUN, COPY, CMD, and more.", date: "Aug 03, 2026" },
+    { title: "Containers", description: "Running, managing, inspecting, and debugging containers.", date: "Aug 03, 2026" },
+    { title: "Volumes", description: "Persistent data storage with named volumes and bind mounts.", date: "Aug 03, 2026" },
+    { title: "Networking", description: "Bridge, host, and custom networks for container communication.", date: "Aug 03, 2026" },
+    { title: "Docker Compose", description: "Define and run multi-container apps with a single YAML file.", date: "Aug 03, 2026" },
+    { title: "Registry", description: "Docker Hub, private registries, push and pull workflows.", date: "Aug 03, 2026" },
+    { title: "Multi-Stage Builds", description: "Build tiny production images by separating build and runtime.", date: "Aug 03, 2026" },
+    { title: "Environment Variables", description: "Configure containers securely with environment variables.", date: "Aug 03, 2026" },
+    { title: "Bind Mounts", description: "Real-time host-to-container file sync for development.", date: "Aug 03, 2026" },
+    { title: "Docker Commands", description: "Complete Docker command reference for daily use.", date: "Aug 03, 2026" },
+    { title: "Whats Next", description: "Kubernetes, cloud, CI/CD — your roadmap after Docker.", date: "Aug 03, 2026" },
   ],
   "k8s": [
     { title: "Pods", description: "The smallest deployable unit in Kubernetes.", date: "Mar 07, 2026" },
