@@ -22,13 +22,13 @@ export default function ContentCard({ title, description, category, date, slug, 
                 </span>
                 <span className="text-xs font-medium text-muted-foreground">{date}</span>
             </div>
-            <h3 className="mb-2 text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
+            <h3 className="mb-2 text-lg font-semibold tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary leading-snug">
                 {title}
             </h3>
-            <p className="mb-6 text-muted-foreground line-clamp-2 leading-relaxed text-sm">
+            <p className="mb-6 text-muted-foreground line-clamp-2 leading-relaxed text-[0.9375rem]">
                 {description}
             </p>
-            <div className="flex items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3">
+            <div className="flex items-center gap-2 text-[0.875rem] font-medium text-primary transition-all group-hover:gap-3">
                 Read Tutorial <ArrowRight className="h-4 w-4" />
             </div>
         </Link>

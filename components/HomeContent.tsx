@@ -41,11 +41,11 @@ export default function HomeContent({ tutorialContent }: HomeContentProps) {
                     <>
                         <header className="flex items-center justify-between border-b pb-4">
                             <div className="space-y-1">
-                                <h1 className="text-3xl font-bold tracking-tight text-foreground flex items-center gap-2">
+                                <h1 className="text-2xl sm:text-3xl font-bold tracking-[-0.025em] text-foreground flex items-center gap-2.5 leading-tight">
                                     <Sparkles className="h-6 w-6 text-yellow-500" />
                                     {displayCategoryView} {activeSubCategory ? `| ${activeSubCategory}` : "Articles"}
                                 </h1>
-                                <p className="text-muted-foreground">
+                                <p className="text-muted-foreground text-[0.9375rem] leading-relaxed">
                                     Explore our latest curated content about {displayCategory} {activeSubCategory && `> ${activeSubCategory}`}.
                                 </p>
                             </div>

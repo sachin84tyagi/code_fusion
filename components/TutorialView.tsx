@@ -18,7 +18,7 @@ const MarkdownCode = ({ className, children, ...props }: any) => {
     const isInsidePre = React.useContext(PreContext);
     const isInline = !isInsidePre;
     return isInline ? (
-        <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.85em] font-medium text-foreground relative -top-[1px]" {...props}>
+        <code className="rounded-md bg-muted px-1.5 py-1 font-mono text-[0.84em] font-medium text-foreground relative -top-[0.5px] tracking-tight" {...props}>
             {children}
         </code>
     ) : (
@@ -106,15 +106,15 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                     />
                 </div>
 
-                <header className="mb-6 lg:mb-8 space-y-3">
+                <header className="mb-8 lg:mb-10 space-y-4">
                     <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-[10px] font-bold text-primary bg-primary/10 w-fit px-2.5 py-1 rounded-full uppercase tracking-wider">
+                        <div className="flex items-center gap-2 text-[11px] font-semibold text-primary bg-primary/10 w-fit px-3 py-1.5 rounded-full uppercase tracking-widest">
                             <Sparkles className="h-3 w-3" />
                             <span>{category} Tutorial</span>
                         </div>
                         <button 
                             onClick={toggleFullScreen}
-                            className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors bg-secondary/50 px-3 py-1.5 rounded-md"
+                            className="flex items-center gap-1.5 text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors bg-secondary/50 px-3 py-1.5 rounded-lg"
                         >
                             {isFullScreen ? (
                                 <><Minimize className="h-3.5 w-3.5" /> <span>Exit Full Screen</span></>
@@ -124,45 +124,45 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                         </button>
                     </div>
 
-                    <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
+                    <h1 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold tracking-[-0.03em] text-foreground leading-[1.2]">
                         {title || "Untitled Article"}
                     </h1>
 
-                    <div className="flex items-center gap-4 text-muted-foreground text-xs font-medium">
-                        <div className="flex items-center gap-1.5 font-semibold">
+                    <div className="flex items-center gap-4 text-muted-foreground text-[13px] font-medium">
+                        <div className="flex items-center gap-1.5">
                             <Clock className="h-4 w-4" />
                             <span>{readingTime} min read</span>
                         </div>
                     </div>
                 </header>
 
-            <div className={`prose prose-slate dark:prose-invert w-full ${isFullScreen ? 'max-w-none' : 'max-w-[75ch]'}`}>
+            <div className={`prose prose-slate dark:prose-invert w-full font-serif ${isFullScreen ? 'max-w-none' : 'max-w-[72ch]'}`}>
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
-                        h1: ({ ...props }) => <h1 className="text-xl font-bold mt-6 mb-3 text-foreground tracking-tight" {...props} />,
-                        h2: ({ ...props }) => <h2 className="text-lg font-semibold !mt-4 !mb-1 text-foreground border-b border-border/40 pb-1 tracking-tight flex items-center gap-2 group" {...props} />,
-                        h3: ({ ...props }) => <h3 className="text-base font-medium !mt-2 !mb-1 text-foreground tracking-tight" {...props} />,
-                        p: ({ ...props }) => <p className="leading-tight text-muted-foreground !mb-1 !mt-0 text-[13px] sm:text-sm lg:text-[15px]" {...props} />,
+                        h1: ({ ...props }) => <h1 className="font-sans text-[1.5rem] sm:text-[1.65rem] font-bold mt-10 mb-4 text-foreground tracking-[-0.025em] leading-[1.25]" {...props} />,
+                        h2: ({ ...props }) => <h2 className="font-sans text-[1.25rem] sm:text-[1.35rem] font-semibold !mt-8 !mb-3 text-foreground border-b border-border/40 pb-2 tracking-[-0.02em] leading-[1.3] flex items-center gap-2 group" {...props} />,
+                        h3: ({ ...props }) => <h3 className="font-sans text-[1.1rem] sm:text-[1.15rem] font-semibold !mt-6 !mb-2 text-foreground tracking-[-0.015em] leading-[1.35]" {...props} />,
+                        p: ({ ...props }) => <p className="leading-[1.8] text-foreground/80 !mb-4 !mt-0 text-[0.95rem] sm:text-base lg:text-[1.0625rem]" {...props} />,
                         a: ({ ...props }) => <a className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-all" {...props} />,
                         strong: ({ ...props }) => <strong className="font-semibold text-foreground" {...props} />,
-                        ul: ({ ...props }) => <ul className="my-3 ml-5 list-none space-y-1.5 text-muted-foreground text-[13px] sm:text-sm lg:text-[15px]" {...props} />,
-                        ol: ({ ...props }) => <ol className="my-3 ml-5 list-decimal space-y-1.5 text-muted-foreground text-[13px] sm:text-sm lg:text-[15px] marker:text-primary/70 marker:font-medium" {...props} />,
+                        ul: ({ ...props }) => <ul className="my-4 ml-5 list-none space-y-2 text-foreground/80 text-[0.95rem] sm:text-base lg:text-[1.0625rem]" {...props} />,
+                        ol: ({ ...props }) => <ol className="my-4 ml-5 list-decimal space-y-2 text-foreground/80 text-[0.95rem] sm:text-base lg:text-[1.0625rem] marker:text-primary/70 marker:font-medium" {...props} />,
                         li: ({ ...props }) => (
-                            <li className="relative pl-1.5" {...props}>
-                                {props.className !== 'task-list-item' && <span className="absolute -left-5 top-2 h-1 w-1 rounded-full bg-primary/40" />}
+                            <li className="relative pl-1.5 leading-[1.75]" {...props}>
+                                {props.className !== 'task-list-item' && <span className="absolute -left-5 top-[0.65em] h-1.5 w-1.5 rounded-full bg-primary/30" />}
                                 {props.children}
                             </li>
                         ),
                         blockquote: ({ ...props }) => (
-                            <blockquote className="relative my-4 overflow-hidden rounded-xl border border-primary/20 bg-primary/5 px-5 py-3 sm:px-6 text-muted-foreground shadow-sm">
+                            <blockquote className="relative my-6 overflow-hidden rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 sm:px-6 text-foreground/75 shadow-sm">
                                 <div className="absolute left-0 top-0 h-full w-1 bg-primary" />
-                                <div className="italic text-[13px] sm:text-sm lg:text-[15px] opacity-95 leading-relaxed font-medium">{props.children}</div>
+                                <div className="italic text-[0.95rem] sm:text-base lg:text-[1.0625rem] leading-[1.7] font-normal">{props.children}</div>
                             </blockquote>
                         ),
                         code: MarkdownCode,
                         pre: ({ children, ...props }) => (
-                            <div className="relative my-4 group rounded-xl overflow-hidden border border-border/50 shadow-sm bg-[#1e1e1e]">
+                            <div className="relative my-6 group rounded-xl overflow-hidden border border-border/50 shadow-sm bg-[#1e1e1e]">
                                 {/* Mac OS Window Header */}
                                 <div className="flex items-center px-4 py-1.5 bg-[#2d2d2d] border-b border-white/5">
                                     <div className="flex space-x-1.5">
@@ -175,24 +175,24 @@ export default function TutorialView({ content, title, category }: TutorialViewP
                                     </div>
                                 </div>
                                 <PreContext.Provider value={true}>
-                                    <pre className="p-3 sm:p-4 overflow-x-auto text-[11px] sm:text-[13px] font-mono text-gray-300 leading-relaxed font-medium" {...props}>
+                                    <pre className="p-3 sm:p-4 overflow-x-auto text-[12px] sm:text-[13.5px] font-mono text-gray-300 leading-[1.7] font-normal" {...props}>
                                         {children}
                                     </pre>
                                 </PreContext.Provider>
                             </div>
                         ),
                         img: MarkdownImage,
-                        hr: () => <hr className="!my-3 border-border/50" />
+                        hr: () => <hr className="!my-6 border-border/50" />
                     }}
                 >
                     {content}
                 </ReactMarkdown>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-border/40 flex items-center justify-between">
-                <div className="flex items-center gap-2 text-muted-foreground">
+            <div className="mt-10 pt-5 border-t border-border/40 flex items-center justify-between">
+                <div className="flex items-center gap-2.5 text-muted-foreground font-sans">
                     <CheckCircle2 className="h-5 w-5 text-green-500" />
-                    <span className="font-medium">You reached the end of this tutorial.</span>
+                    <span className="font-medium text-[0.9375rem]">You reached the end of this tutorial.</span>
                 </div>
             </div>
             </div>

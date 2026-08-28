@@ -59,7 +59,7 @@ export default function Header() {
                     <div className="rounded-lg bg-primary/10 p-1.5 flex items-center justify-center">
                         <Rocket className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-lg font-bold tracking-tight text-foreground">CodeFusion</span>
+                    <span className="text-lg font-bold tracking-[-0.02em] text-foreground">CodeFusion</span>
                 </div>
 
                 {/* Desktop Navigation */}
@@ -84,7 +84,7 @@ export default function Header() {
                                         key={item.name}
                                         onClick={() => handleNavClick(item.name)}
                                         className={cn(
-                                            "relative whitespace-nowrap text-sm font-medium transition-all hover:text-foreground py-2 px-1",
+                                            "relative whitespace-nowrap text-[0.875rem] font-medium transition-all hover:text-foreground py-2 px-1 tracking-[-0.01em]",
                                             activeCategory === item.name
                                                 ? "text-foreground"
                                                 : "text-muted-foreground hover:scale-105"
@@ -127,7 +127,7 @@ export default function Header() {
                                 key={item.name}
                                 onClick={() => handleNavClick(item.name)}
                                 className={cn(
-                                    "text-left px-4 py-3 rounded-xl text-base font-medium transition-colors hover:bg-secondary/50",
+                                    "text-left px-4 py-3 rounded-xl text-[0.9375rem] font-medium transition-colors hover:bg-secondary/50 tracking-[-0.01em]",
                                     activeCategory === item.name ? "bg-secondary text-foreground" : "text-muted-foreground"
                                 )}
                             >

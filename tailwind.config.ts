@@ -8,7 +8,8 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-outfit)', 'Outfit', 'sans-serif'],
+                sans: ['var(--font-inter)', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                serif: ['var(--font-source-serif)', 'Source Serif 4', 'Georgia', 'serif'],
                 mono: ['var(--font-jetbrains-mono)', 'monospace'],
             },
             colors: {
@@ -38,7 +39,26 @@ const config: Config = {
             typography: () => ({
                 DEFAULT: {
                     css: {
-                        maxWidth: '75ch', // Optimal reading width
+                        maxWidth: '72ch',
+                        fontSize: '1.0625rem',
+                        lineHeight: '1.75',
+                        letterSpacing: '-0.003em',
+                        p: {
+                            marginTop: '1em',
+                            marginBottom: '1em',
+                        },
+                        h1: {
+                            letterSpacing: '-0.025em',
+                            fontWeight: '700',
+                        },
+                        h2: {
+                            letterSpacing: '-0.02em',
+                            fontWeight: '650',
+                        },
+                        h3: {
+                            letterSpacing: '-0.015em',
+                            fontWeight: '600',
+                        },
                     },
                 },
             }),
@@ -49,3 +69,4 @@ const config: Config = {
     ],
 };
 export default config;
+
