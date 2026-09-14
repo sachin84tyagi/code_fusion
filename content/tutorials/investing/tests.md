@@ -2,8 +2,6 @@
 
 > **Test ek probe hai — professional traders check karte hain ki market mein abhi bhi supply/demand present hai ya exhaust ho gayi.**
 
-![Successful vs Failed Test — Low Volume Probe](/image/test_bar_chart_1789314797461.jpg)
-
 ---
 
 # Test Kya Hota Hai?

@@ -2,11 +2,224 @@
 
 > **Yeh woh bars hain jahan market "saans le raha hota hai" — aur professionals us moment mein apna plan execute karte hain.**
 
-![No Demand vs No Supply — Side by Side Comparison](/image/no_demand_no_supply_chart_1789314599660.jpg)
+---
+
+# Tom Williams Ki Official Definition — Page 19 (Master the Markets)
+
+> *"These are the two most precise definitions in all of VSA."*
+
+Yeh do definitions Tom Williams ne "Master the Markets" ke page 19 ke footnotes mein likhi hain. Yeh exact, precise, aur authoritative hain. Pehle inhe word-by-word samjho.
 
 ---
 
-# No Demand — Kya Hota Hai?
+## 1. Down-bars — "No Selling Pressure"
+
+> **Tom Williams (verbatim):**
+> *"If prices are dropping on volume that is less than the previous two bars (or candles), especially if spreads are narrow, with the price closing in the middle or high of the bar, this indicates that there is 'no selling pressure'."*
+
+![NO SELLING PRESSURE — Down Bar with Low Volume + Close Near Top](/image/no_selling_pressure_clear_1789418614609.jpg)
+
+### Conditions — Ek Ek Karke
+
+**Condition 1: "prices are dropping"**
+```
+→ Yeh ek DOWN BAR hai
+→ Price neeche aayi is bar mein
+→ Dekhne mein bearish lagta hai — lekin hai nahi!
+```
+
+**Condition 2: "volume less than the previous TWO bars"**
+```
+Bar 1: Vol = 150  ← Previous
+Bar 2: Vol = 140  ← Previous
+Bar 3: Vol = 55   ← KEY BAR (DOWN bar)
+
+55 < 140 < 150 → Condition met ✅
+
+Volume reference: Previous 2 bars — not moving average
+```
+
+**Condition 3: "especially if spreads are narrow"**
+```
+→ Bar ki range chhoti ho (High - Low = small number)
+→ Sellers ne price ko zyada neeche nahi khicha
+→ Matlab sellers force mein nahi hain
+```
+
+**Condition 4: "price closing in the middle or high of the bar"**
+```
+Close near HIGH:   Buyers ne end mein push kiya  ← Strong signal
+Close near MIDDLE: Neither side dominated        ← Moderate signal
+Close near LOW:    Sellers won this bar         ← NOT No Selling Pressure
+```
+
+### Kya Ho Raha Hai — Logic
+
+```
+Socho ek push-of-war (rassi ki competition):
+
+Bar 1: Team A (sellers) pull karta hai — full force (Vol 150)
+Bar 2: Team A pull karta hai — still strong (Vol 140)
+Bar 3: Team A pull karta hai — BAHUT THAKA HUA (Vol 55)
+       Price neeche toh aayi, lekin:
+       - Bahut kam (narrow spread)
+       - Close near top — buyers ne wapas khicha
+
+Conclusion: SELLERS KI TAAKAT KHATAM HO RAHI HAI.
+            Supply exhaust hone wali hai.
+            Yeh strength signal hai — bearish dikhta hai lekin hai nahi.
+```
+
+### Real Example
+```
+Stock ABC, Daily chart:
+Day 1: Red bar, High=205, Low=195, Close=197, Vol=2,50,000
+Day 2: Red bar, High=197, Low=188, Close=190, Vol=2,30,000
+Day 3: Red bar, High=190, Low=186, Close=189, Vol=80,000  ← KEY BAR
+               ↑ Narrow spread (4 pts only)
+               ↑ Vol 80K < 250K and 230K  ✅
+               ↑ Close at 189 = near HIGH of bar (186-190 range)  ✅
+
+Reading: NO SELLING PRESSURE
+Signal: Sellers exhausted. Agle up-move ki taiyari ho sakti hai.
+```
+
+### Kya Karna Hai Jab Yeh Dikhe?
+```
+Background = BULLISH (Accumulation range mein ya trend ke baad pullback):
+→ Yeh No Selling Pressure bar = potential reversal setup
+→ Wait: Kya agle bar upar jaata hai (confirmation)?
+→ Then: Long trade consider karo
+
+Background = BEARISH (Downtrend mein):
+→ Yeh sirf momentary pause hai — sellers wapas aayenge
+→ Do NOT buy. Wait and watch.
+```
+
+---
+
+## 2. Up-bars — "No Demand"
+
+> **Tom Williams (verbatim):**
+> *"Weakness manifests itself on up-bars, especially when spreads are narrow, with volume less than the previous two bars (or candles). This shows that there is 'no demand' from professional traders."*
+
+![NO DEMAND — Up Bar with Low Volume + Close Near Bottom](/image/no_demand_upbar_clear_1789418627716.jpg)
+
+### Conditions — Ek Ek Karke
+
+**Condition 1: "weakness manifests itself on up-bars"**
+```
+→ Yeh ek UP BAR hai
+→ Price upar gayi is bar mein
+→ Dekhne mein bullish lagta hai — lekin hai nahi!
+→ "Weakness" — the bar itself is the DECEPTION
+```
+
+**Condition 2: "spreads are narrow"**
+```
+→ Bar ki range chhoti ho
+→ Price itni upar nahi aayi despite trying
+→ No real force behind the move up
+```
+
+**Condition 3: "volume less than the previous two bars"**
+```
+Bar 1: Vol = 160  ← Previous
+Bar 2: Vol = 145  ← Previous
+Bar 3: Vol = 50   ← KEY BAR (UP bar)
+
+50 < 145 < 160 → Condition met ✅
+
+"Professional traders" = institutions, funds — inki volume bahut hoti hai
+Agar volume low hai → Professionals BUY nahi kar rahe
+```
+
+**Close position (implied by Tom Williams):**
+```
+Close near BOTTOM: Professionals ne end mein sell kiya ← Strongest signal
+Close near MIDDLE: Mixed action                       ← Moderate
+Close near TOP:    Might not be No Demand             ← Check carefully
+```
+
+### Kya Ho Raha Hai — Logic
+
+```
+Socho ek movie theatre:
+
+Normal popular movie: 500 log aate hain (High Vol)
+"No Demand" movie:    20 log aate hain (Low Vol)
+
+Market same hai:
+UP move with 500 participants = Real demand, real strength
+UP move with 20 participants  = Fake move, no real buyers
+
+Professional traders nahi hain = Move FAKE hai = Price wapas aayegi
+```
+
+### Real Example
+```
+Stock XYZ, Daily chart:
+Day 1: Green bar, Vol=1,80,000
+Day 2: Green bar, Vol=1,60,000
+Day 3: Green bar, Vol=45,000   ← KEY BAR
+               ↑ Narrow spread (barely moved up)
+               ↑ Vol 45K < 180K and 160K  ✅
+               ↑ Close near bottom of bar  ✅
+
+Reading: NO DEMAND
+Signal: Professionals absent. Retailers mein thoda enthusiasm — par toh kuch nahi.
+        Short entry setup OR avoid buying.
+```
+
+### Kya Karna Hai Jab Yeh Dikhe?
+```
+Background = BEARISH (Distribution range mein ya downtrend mein):
+→ Yeh No Demand bar = short entry setup
+→ Wait: Kya agle bar neeche jaata hai (confirmation)?
+→ Then: Short trade ya exit longs consider karo
+
+Background = BULLISH (Markup phase mein):
+→ Yeh sirf momentary pause hai — buyers wapas aayenge
+→ Do NOT short. This is just a weak pullback.
+```
+
+---
+
+## Side-by-Side Comparison — Book Se Directly
+
+| | Down-bars (No Selling Pressure) | Up-bars (No Demand) |
+|---|---|---|
+| **Bar type** | DOWN bar (red) | UP bar (green) |
+| **Spread** | Narrow | Narrow |
+| **Volume** | Less than previous 2 bars | Less than previous 2 bars |
+| **Close** | Middle or HIGH of bar | Near BOTTOM (implied) |
+| **What it means** | Sellers exhausted | Buyers absent |
+| **Signal type** | STRENGTH (hidden) | WEAKNESS (hidden) |
+| **Paradox** | Bearish-looking but bullish | Bullish-looking but bearish |
+
+> **Sabse important line Tom Williams se:**
+> *"Weakness manifests itself on up-bars."*
+> Matlab: Dekho UP bar hai — lekin weakness hai andar. Yahi VSA ka asli magic hai.
+
+---
+
+## The Common Thread — Dono Mein Ek Rule
+
+```
+BOTH signals share ONE requirement:
+Volume < Previous 2 bars
+
+Tom Williams specifically said "two bars (or candles)"
+NOT: Moving average
+NOT: Some arbitrary level
+NOT: "low volume" generally
+
+EXACTLY: Less than the PREVIOUS TWO bars
+```
+
+---
+
+
 
 ## Simple Meaning
 

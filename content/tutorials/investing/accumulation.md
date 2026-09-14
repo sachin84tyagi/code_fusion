@@ -2,8 +2,6 @@
 
 > **Accumulation woh phase hai jab professionals dheere dheere public se stock khareed lete hain — bina price zyada badhaye — jab tak unke paas enough stock na ho jaaye.**
 
-![Wyckoff Accumulation — Complete Schematic SC to Markup](/image/accumulation_schematic_1789314863364.jpg)
-
 ---
 
 # Accumulation Kya Hota Hai?

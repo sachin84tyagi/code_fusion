@@ -2,8 +2,6 @@
 
 > **Spread ek bar ki "energy" batata hai. Kitna effort laga, kitna result nikla — yeh sab spread mein chhupta hai.**
 
-![Spread Types Comparison — Narrow vs Wide](/image/spread_comparison_chart_1789314524305.jpg)
-
 ---
 
 # Spread kya hota hai?

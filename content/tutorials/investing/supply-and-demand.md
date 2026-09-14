@@ -2,8 +2,6 @@
 
 > **Market ek auction house hai. Buyers aur sellers ke beech ek constant battle chal rahi hai. Charts us battle ka live scoreboard hai.**
 
-![Supply and Demand Zones — Market Ki Real Battle](/image/supply_demand_chart_1789314641404.jpg)
-
 ---
 
 # Basic Definition

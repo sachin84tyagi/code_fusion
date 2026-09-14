@@ -2,8 +2,6 @@
 
 > **Close ek bar ka "jury verdict" hai. Saari ladaai ke baad — buyers ya sellers mein se kaun jeet gaya?**
 
-![Close Position — Near Top vs Middle vs Bottom](/image/close_position_chart_1789314550127.jpg)
-
 ---
 
 # Close Position Kya Hota Hai?

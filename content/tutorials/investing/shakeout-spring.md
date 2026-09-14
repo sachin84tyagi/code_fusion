@@ -2,8 +2,6 @@
 
 > **Spring ek jaanboojhkar kiya gaya dhoka hai — retail traders ko trap karne ke liye. Jo ise samajh leta hai, woh professional ban jaata hai.**
 
-![Spring Pattern — Wyckoff Trap and Recovery](/image/spring_pattern_chart_1789314808432.jpg)
-
 ---
 
 # Concept Samajhna — Pehle Ek Story

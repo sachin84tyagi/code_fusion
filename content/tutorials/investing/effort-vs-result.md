@@ -2,8 +2,6 @@
 
 > **Yeh VSA ka dil hai. Agar sirf ek concept samajh liya toh poora system samajh aata hai.**
 
-![Effort vs Result — 4 Scenarios Grid](/image/effort_vs_result_chart_1789314587670.jpg)
-
 ---
 
 # Basic Idea

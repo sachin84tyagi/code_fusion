@@ -2,8 +2,6 @@
 
 > **Yeh trading ki ABC hai. Jab tak yeh crystal clear nahi hota, aage badh hi nahi sakte.**
 
-![Up Bar vs Down Bar — OHLC Basics](/image/up_down_bar_chart_1789314506452.jpg)
-
 ---
 
 # OHLC — Ek Bar Ke 4 Parts

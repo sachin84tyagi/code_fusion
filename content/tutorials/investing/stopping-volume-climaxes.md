@@ -2,8 +2,6 @@
 
 > **Jab market mein tsunami aata hai — extreme volume — woh usually ek turning point hota hai. Yeh samajhna zaroori hai.**
 
-![Selling Climax — Panic Low and Automatic Rally](/image/selling_climax_chart_1789314630589.jpg)
-
 ---
 
 # Climactic Action Kya Hota Hai?
