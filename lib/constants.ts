@@ -1,4 +1,4 @@
-import { BookOpen, Code2, Database, Shield, Server, Cpu, Layout, Globe, Box, Workflow, Cloud, Lock, Dumbbell } from "lucide-react";
+import { BookOpen, Code2, Database, Shield, Server, Cpu, Layout, Globe, Box, Workflow, Cloud, Lock, Dumbbell, TrendingUp } from "lucide-react";
 import { jsTopics } from "./utils/js";
 import { reactTopics } from "./utils/react_js";
 import { pythonTopics } from "./utils/python";
@@ -23,6 +23,7 @@ import { excerciseTopics } from "./utils/gym";
 import { springTopics } from "./utils/spring";
 import { javaTopics } from "./utils/java";
 import { cicdTopics } from "./utils/cicd";
+import { investingTopics } from "./utils/investing";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
@@ -53,6 +54,7 @@ export const navItems = [
   { name: "aws", value: "AWS", link: awsTopics, icon: Cloud },
   { name: "cybersecurity", value: "Cybersecurity", link: cyberTopics, icon: Lock },
   { name: "gym", value: "Gym", link: excerciseTopics, icon: Dumbbell },
+  { name: "investing", value: "Investing", link: investingTopics, icon: Dumbbell },
 ] as const;
 
 type NavItem = typeof navItems[number];
@@ -85,6 +87,30 @@ export const contentData = {
   "java": [
     { title: "Introduction", description: "Getting started with Java and OOP concepts.", date: "Feb 12, 2026" },
   ],
+  "investing": [
+    { title: "Introduction", description: "Wyckoff + VSA master roadmap — Level 0 se Level 10 tak. Foundation se real trading system tak.", date: "Sep 13, 2026" },
+    { title: "Up Down Bar", description: "OHLC, candlestick/bar, Up Bar aur Down Bar — chart ki sabse basic language. Trading ka alphabet.", date: "Sep 13, 2026" },
+    { title: "Spread", description: "Spread kya hai, narrow vs wide spread ka kya matlab hai, aur yeh price action ko kaise reveal karta hai.", date: "Sep 13, 2026" },
+    { title: "Volume", description: "Volume kya batata hai, high vs low volume ka meaning, aur volume ko price ke saath kaise padhein.", date: "Sep 13, 2026" },
+    { title: "Close Position", description: "Bar ka close kahaan hua — top, middle, ya bottom — aur yeh kyun sabse important clue hai.", date: "Sep 13, 2026" },
+    { title: "Effort Vs Result", description: "VSA ka core principle — effort (volume) aur result (price move) ka relationship. Jab yeh match nahi karte tab kya hota hai.", date: "Sep 13, 2026" },
+    { title: "Supply And Demand", description: "Market mein supply aur demand ka actual meaning — buyers vs sellers ki real battle chart par kaise dikhti hai.", date: "Sep 13, 2026" },
+    { title: "No Demand No Supply", description: "No Demand aur No Supply bars — unhe kaise identify karen, background check kyun zaroori hai, aur inhe trade karne ke 5 sawaal.", date: "Sep 13, 2026" },
+    { title: "Stopping Volume Climaxes", description: "Selling Climax, Buying Climax, aur Stopping Volume — market reversals ki foundation. Climactic action ko kaise padhein.", date: "Sep 13, 2026" },
+    { title: "Tests", description: "Supply/demand test kya hota hai, Test bar ko identify karna, aur successful vs failed tests mein kya difference hota hai.", date: "Sep 13, 2026" },
+    { title: "Shakeout Spring", description: "Spring aur Shakeout — Wyckoff ke sabse powerful setups. Fake breakdowns, trapped bears, aur real reversals.", date: "Sep 13, 2026" },
+    { title: "Upthrust", description: "Upthrust aur Pseudo-Upthrust — fake breakouts, trapped bulls, aur distribution mein unka role.", date: "Sep 13, 2026" },
+    { title: "Absorption", description: "Absorption volume kya hai, large operators kaise stock absorb karte hain, aur yeh accumulation/distribution mein kaise fit hota hai.", date: "Sep 13, 2026" },
+    { title: "Accumulation", description: "Wyckoff Accumulation Schematic — SC, AR, ST, Spring, Test, SOS, LPS. Har phase ka meaning aur chart par kaise dikhta hai.", date: "Sep 13, 2026" },
+    { title: "Distribution", description: "Wyckoff Distribution Schematic — BC, AR, ST, Upthrust, SOW, LPSY. Tops kaise bante hain aur unhe kaise identify karein.", date: "Sep 13, 2026" },
+    { title: "Markup Markdown", description: "Market ke 4 phases — Accumulation, Markup, Distribution, Markdown. Aap abhi kis phase mein hain yeh kaise janen.", date: "Sep 13, 2026" },
+    { title: "Background Analysis", description: "Background analysis — pichle 20-50 bars ki kahani padhna. Ek candle ka meaning context ke bina kuch nahi hota.", date: "Sep 13, 2026" },
+    { title: "Real Charts", description: "Real random charts par Wyckoff+VSA apply karna — textbook se real world mein jump. Galat interpretations se kaise seekhein.", date: "Sep 13, 2026" },
+    { title: "Backtesting", description: "100-200 historical setups record karna — win rate, R/R, expectancy, max drawdown. Proof karo ki setup kaam karta hai.", date: "Sep 13, 2026" },
+    { title: "Strategy", description: "Complete trading setup banana — entry trigger, stop-loss placement, target logic. No Demand = Sell sirf strategy nahi hai.", date: "Sep 13, 2026" },
+    { title: "Risk Management", description: "Position sizing, 1% rule, R-multiple, drawdown management, aur losing streak survival. Bina iske koi system complete nahi.", date: "Sep 13, 2026" },
+  ],
+
   "cicd": [
     { title: "Introduction", description: "What CI/CD is, why it matters, and how it transforms software delivery.", date: "Aug 03, 2026" },
     { title: "What is CI CD", description: "Deep dive into CI, CD, pipelines, phases, DORA metrics, and feedback loops.", date: "Aug 03, 2026" },
