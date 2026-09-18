@@ -32,6 +32,8 @@ Volume kam = Supply/Demand exhausted (good sign)
 
 # Test for Supply — Strength Signal
 
+![Tests — Supply aur Demand Ki Real Probe: Successful vs Failed Test](/image/test_bar_chart_1789314797461.jpg)
+
 ## Concept
 
 Accumulation phase mein, professionals check karte hain:
@@ -101,6 +103,8 @@ The market is not ready to go up yet.
 
 # Test for Demand — Weakness Signal
 
+![Test for Demand — Weakness Signal: Successful vs Failed Demand Test](/image/test_for_demand_weakness_1789677856492.jpg)
+
 ## Concept
 
 Distribution phase mein, professionals check karte hain:
@@ -166,6 +170,8 @@ Volume High = Demand still there → Continue up possible
 
 # Test + Stopping Volume = Extra Power
 
+![Stopping Volume + Test = Maximum Power Signal — Complete Sequence](/image/test_sv_power_sequence_1789677867228.jpg)
+
 VSA kehta hai:
 
 > "On its own doesn't mean much but if there has been stopping volume previously gives it added strength."
@@ -181,6 +187,8 @@ SC hua → Price bounced (AR) → Test hua → Low volume → Close near top
 ---
 
 # Multiple Tests — What It Means
+
+![Multiple Tests — Increasing Confidence with Each Test](/image/multiple_tests_progression_1789677876460.jpg)
 
 Sometimes market ek test se satisfy nahi hota. Multiple tests ho sakte hain:
 

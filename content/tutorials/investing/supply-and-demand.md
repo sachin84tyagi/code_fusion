@@ -258,7 +258,8 @@ Sirf "down bar" dekhke supply assume mat karo.
 | Supply = Demand | Sideways/range |
 | Supply on Up Bar | Hidden weakness (sellers absorbing buying) |
 | Demand on Down Bar | Hidden strength (buyers absorbing selling) |
-
+![alt text](/image/supply_on_up_green_bar.png)
+![alt text](/image/demand_on_down_red_bar.png)
 ---
 
 👉 Agla chapter: **No Demand / No Supply →** — VSA ke pehle practical signals.

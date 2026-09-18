@@ -21,6 +21,8 @@ Yeh **Climactic Action** hai.
 
 # Selling Climax (SC) — Bottom Reversals Ka Signal
 
+![Selling Climax (SC) — Panic Low aur Reversal](/image/selling_climax_chart_1789314630589.jpg)
+
 ## Kya Hota Hai?
 
 ```
@@ -97,6 +99,8 @@ Kyun?
 
 # Buying Climax (BC) — Top Reversals Ka Signal
 
+![Buying Climax (BC) — Euphoric Top aur Reversal](/image/buying_climax_chart_1789675635434.jpg)
+
 ## Kya Hota Hai?
 
 SC ka ulta — market tops pe hota hai:
@@ -134,6 +138,8 @@ Itni excitement ke baad supply aati hai (promoters, early investors bechte hain)
 ---
 
 # Stopping Volume (SV) — SC Ka Ek Version
+
+![Stopping Volume (SV) vs Selling Climax (SC) — Hidden Strength Signal](/image/stopping_volume_chart_1789675665238.jpg)
 
 ## Kya Hota Hai?
 
@@ -192,6 +198,8 @@ Background + Next bars + Context zaroori hai.
 ---
 
 # Sequence: SC → AR → ST → Spring → SOS
+
+![Wyckoff Accumulation Sequence: SC → AR → ST → Spring → SOS → Markup](/image/wyckoff_accumulation_sequence_1789675693062.jpg)
 
 Selling Climax ek series ki starting hai (Wyckoff Accumulation):
 
