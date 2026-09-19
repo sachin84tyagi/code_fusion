@@ -66,6 +66,8 @@ Price Chart:
      ──────────────────── ← Back above support → MARKUP begins!
 ```
 
+![Spring Concept — Accumulation, Breakdown, Recovery aur Markup](/images/spring-concept.jpg)
+
 ---
 
 # Spring Ke Types — Volume Se Pehchano
@@ -92,6 +94,8 @@ Matlab: Supply nahi thi hi! Koi bechna nahi chahta tha.
 ```
 
 **Lower volume on spring = Stronger signal**
+
+![Spring Volume Types — High Volume vs Low Volume Spring](/images/spring-volume-types.jpg)
 
 ---
 
@@ -133,6 +137,8 @@ Test ke baad:
 = Professionals actively buying — markup begin!
 ```
 
+![Spring Confirmation Flow — Spring → Test → SOS → Markup](/images/spring-confirmation.jpg)
+
 ---
 
 # Shakeout — Spring Ka Bhai
@@ -153,6 +159,8 @@ Both precede strong upward moves.
 ```
 
 **Difference:** Spring zyada planned aur extended hota hai. Shakeout sudden jolt hai.
+
+![Shakeout vs Spring — Key Difference](/images/shakeout-vs-spring.jpg)
 
 ---
 

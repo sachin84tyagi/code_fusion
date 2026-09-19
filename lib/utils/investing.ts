@@ -20,4 +20,5 @@ export const investingTopics: Array<string> = [
   "Backtesting",
   "Strategy",
   "Risk Management",
+  "MTM"
 ];
