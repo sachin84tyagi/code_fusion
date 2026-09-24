@@ -24,6 +24,7 @@ import { springTopics } from "./utils/spring";
 import { javaTopics } from "./utils/java";
 import { cicdTopics } from "./utils/cicd";
 import { investingTopics } from "./utils/investing";
+import { proInvestingTopics } from "./utils/pro_investing";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
@@ -55,6 +56,7 @@ export const navItems = [
   { name: "cybersecurity", value: "Cybersecurity", link: cyberTopics, icon: Lock },
   { name: "gym", value: "Gym", link: excerciseTopics, icon: Dumbbell },
   { name: "investing", value: "Investing", link: investingTopics, icon: Dumbbell },
+  { name: "pro_investing", value: "Pro Investing", link: proInvestingTopics, icon: TrendingUp },
 ] as const;
 
 type NavItem = typeof navItems[number];
@@ -109,6 +111,44 @@ export const contentData = {
     { title: "Backtesting", description: "100-200 historical setups record karna — win rate, R/R, expectancy, max drawdown. Proof karo ki setup kaam karta hai.", date: "Sep 13, 2026" },
     { title: "Strategy", description: "Complete trading setup banana — entry trigger, stop-loss placement, target logic. No Demand = Sell sirf strategy nahi hai.", date: "Sep 13, 2026" },
     { title: "Risk Management", description: "Position sizing, 1% rule, R-multiple, drawdown management, aur losing streak survival. Bina iske koi system complete nahi.", date: "Sep 13, 2026" },
+  ],
+
+  "pro_investing": [
+    { title: "Curriculum Map", description: "Complete Master Curriculum — 20 Parts, 30 Chapters, full dependency map, laboratory roadmap & assessment structure for NSE/BSE professional trading.", date: "Sep 22, 2026" },
+    { title: "How Markets Work", description: "Exchange, broker, clearing corp, depository, participants — institutional, retail, HFT, MFs, FPIs. What each participant can and cannot do.", date: "Sep 22, 2026" },
+    { title: "Price Formation", description: "Price discovery, supply-demand, bid-ask, order matching, price-time priority, market impact — how a price is actually formed.", date: "Sep 22, 2026" },
+    { title: "Order Types", description: "Market, Limit, Stop, SL-M, IOC, GTT — mechanics, slippage, advantages, risks with real NSE examples.", date: "Sep 22, 2026" },
+    { title: "Order Book", description: "Level 1/2 depth, bid/ask queue, price-time priority, hidden/iceberg liquidity, displayed vs real liquidity.", date: "Sep 22, 2026" },
+    { title: "Liquidity And Market Impact", description: "Thin/deep liquidity, spread, slippage, market impact, stop clusters, liquidity sweeps, absorption, failed auctions.", date: "Sep 22, 2026" },
+    { title: "Candlestick Mechanics", description: "OHLC, body, wick, range, close location. Doji, pin bar, engulfing, inside/outside bar — no fixed meaning without context.", date: "Sep 22, 2026" },
+    { title: "Market Structure", description: "HH/HL/LH/LL, trend, range, breakout, breakdown, retest, failed breakout, support/resistance, swing points, market regime.", date: "Sep 22, 2026" },
+    { title: "Understanding Volume", description: "What volume measures, relative volume, average, expansion/contraction, spike, climax. Volume Z-score, percentile, ratio calculations.", date: "Sep 22, 2026" },
+    { title: "Price Volume Relationship", description: "Complete 6-row Price×Volume matrix with valid interpretation, alternative, false positive, and confirmation for each combination.", date: "Sep 22, 2026" },
+    { title: "VSA Foundations", description: "Effort vs Result, Spread, Volume, Closing Location, Context, Background — the 5 pillars of VSA reading.", date: "Sep 22, 2026" },
+    { title: "VSA Patterns", description: "No Demand, No Supply, Stopping Volume, Selling/Buying Climax, Upthrust, Shakeout, Test, Spring, SOS, SOW, Absorption, Exhaustion.", date: "Sep 22, 2026" },
+    { title: "Wyckoff Principles", description: "Composite Operator, Supply & Demand, Cause & Effect, Effort & Result — the four laws and their real market mechanics.", date: "Sep 22, 2026" },
+    { title: "Accumulation Schematic", description: "PS, SC, AR, ST, Spring, Test, SOS, LPS — Phase A through E with real NSE examples and volume confirmation.", date: "Sep 22, 2026" },
+    { title: "Distribution Schematic", description: "PSY, BC, AR, ST, UT, UTAD, SOW, LPSY — Phases A–E, re-accumulation vs redistribution.", date: "Sep 22, 2026" },
+    { title: "Volume Profile", description: "VAP, POC, VAH/VAL, HVN/LVN, session/fixed/composite profiles, acceptance, rejection, value migration, failed auction.", date: "Sep 22, 2026" },
+    { title: "VWAP", description: "VWAP, Anchored VWAP, slope, deviation, reclaim, rejection — integrated with volume, VSA, Volume Profile, market structure.", date: "Sep 22, 2026" },
+    { title: "Institutional Footprints", description: "Absorption, accumulation, distribution, repeated S/R defence, volume at key levels — and why the chart alone doesn't ID the participant.", date: "Sep 22, 2026" },
+    { title: "FII DII Analysis", description: "FII/FPI vs DII — gross/net buy-sell data, aggregate limitations, how to cross-check with price, volume, delivery, futures, options.", date: "Sep 22, 2026" },
+    { title: "Delivery Analysis", description: "Delivery %, delivery spikes, price+delivery+volume combinations during accumulation, distribution, breakout, breakdown.", date: "Sep 22, 2026" },
+    { title: "Block Bulk Deals", description: "Difference between block and bulk deals, what data they provide, what they don't prove, how to combine with charts.", date: "Sep 22, 2026" },
+    { title: "Order Flow", description: "Aggressive buyers/sellers, delta, CVD, imbalance, absorption, exhaustion, stacked imbalance, liquidity sweep, trapped traders, failed auction.", date: "Sep 22, 2026" },
+    { title: "Advanced Microstructure", description: "Price discovery, liquidity providers/takers, HFT, algo execution, VWAP/TWAP, iceberg, queue priority, opening/closing auction, expiry effects.", date: "Sep 22, 2026" },
+    { title: "Futures Analysis", description: "Basis, OI, Long/Short buildup/unwinding, rollovers, expiry, futures VWAP — and limitations of the standard 4-quadrant OI model.", date: "Sep 22, 2026" },
+    { title: "Options Mechanics", description: "Call/Put, premium, IV, Delta, Gamma, Theta, Vega, OI, Change in OI, PCR, IV skew, option chain — all mechanics explained.", date: "Sep 22, 2026" },
+    { title: "Options Positioning", description: "Call/Put writing, strike-wise positioning, gamma effects, expiry dynamics, max pain limitations, PCR interpretation alternatives.", date: "Sep 22, 2026" },
+    { title: "Essential Indicators", description: "RelVol, VWAP, Volume Profile, OBV, CMF, MFI, ATR, EMA, RSI — formula, meaning, failure modes, redundancy checks.", date: "Sep 22, 2026" },
+    { title: "Multi Timeframe Analysis", description: "Monthly→Weekly→Daily→4H/1H→Intraday. Higher-TF context, lower-TF execution, conflicting timeframes resolution.", date: "Sep 22, 2026" },
+    { title: "False Signals", description: "False breakout/breakdown, volume spike traps, climax traps, short squeeze, news volume, expiry effects, illiquid stocks, algo distortions.", date: "Sep 22, 2026" },
+    { title: "Quantitative Analysis", description: "RelVol, Z-score, percentile, ATR normalization, anomaly detection, volatility-adjusted volume, regime detection, statistical validation.", date: "Sep 22, 2026" },
+    { title: "Professional Workflow", description: "One repeatable 23-step framework: from higher-TF structure → volume regime → VSA → Wyckoff → OI → options → alternatives → invalidation → conclusion.", date: "Sep 22, 2026" },
+    { title: "Practical Laboratory", description: "Real NSE/BSE chart cases: Observe → Analyse → Hypothesize → Test → Alternatives → Confirm → Invalidate → Conclude. Beginner to Pro level.", date: "Sep 22, 2026" },
+    { title: "Master Reference Tables", description: "14 master tables: Price×Volume, VSA, Wyckoff, Volume Profile, VWAP, Futures/OI, Options/OI, Delivery, Liquidity, Order Flow, Microstructure, Indicators, False Signals matrices.", date: "Sep 22, 2026" },
+    { title: "Glossary", description: "Complete glossary — every technical term with simple definition, professional definition, example, related concepts, and common misconception.", date: "Sep 22, 2026" },
+    { title: "Final Capstone", description: "Full professional case study: unknown NSE/BSE instrument, multiple TFs, price+volume+delivery+VP+VWAP+futures+OI+options+FII/DII. Build 10 reports. Model solution provided.", date: "Sep 22, 2026" },
   ],
 
   "cicd": [
