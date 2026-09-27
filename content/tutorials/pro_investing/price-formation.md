@@ -204,6 +204,10 @@ These questions are what Volume Spread Analysis attempts to answer from OHLCV da
 
 ![Market Impact — How a Large Order Moves Price Through the Order Book](/images/pi-market-impact.jpg)
 
+---
+
+![Market Impact — How a Large Order Moves Price Through the Order Book](/image/pi-market-impact_v01.png)
+
 **Market impact** is the price change caused by the execution of an order.
 
 For a retail trader buying 100 shares of a Nifty 50 stock, market impact is essentially zero — the order is absorbed into the existing liquidity without measurable price change.
