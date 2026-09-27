@@ -9,7 +9,7 @@ export const proInvestingTopics: Array<string> = [
   // PART II — ORDER TYPES & MICROSTRUCTURE
   "Order Types",
   "Order Book",
-  "Liquidity And Market Impact",  
+  "Liquidity And Market Impact",
 
   // PART III — PRICE ACTION
   "Candlestick Mechanics",

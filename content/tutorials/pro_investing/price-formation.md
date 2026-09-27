@@ -55,6 +55,12 @@ This is not metaphor. On NSE, right now, for any liquid stock:
 
 ![Bid, Ask, and the Spread — The NSE Order Book](/images/pi-bid-ask-spread.jpg)
 
+---
+
+![Bid, Ask, and the Spread — The NSE Order Book](/image/bid_ask_spread_v01.png)
+
+---
+
 Three terms you must understand precisely:
 
 **BID (Demand side)**
