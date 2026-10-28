@@ -25,6 +25,7 @@ import { javaTopics } from "./utils/java";
 import { cicdTopics } from "./utils/cicd";
 import { investingTopics } from "./utils/investing";
 import { proInvestingTopics } from "./utils/pro_investing";
+import { germanTopics } from "./utils/german";
 
 export const navItems = [
   { name: "js", value: "JS", link: jsTopics, icon: Code2 },
@@ -54,9 +55,10 @@ export const navItems = [
   { name: "k8s", value: "Kubernetes", link: k8sTopics, icon: Server },
   { name: "aws", value: "AWS", link: awsTopics, icon: Cloud },
   { name: "cybersecurity", value: "Cybersecurity", link: cyberTopics, icon: Lock },
-  { name: "gym", value: "Gym", link: excerciseTopics, icon: Dumbbell },
+  // { name: "gym", value: "Gym", link: excerciseTopics, icon: Dumbbell },
   { name: "investing", value: "Investing", link: investingTopics, icon: Dumbbell },
   { name: "pro_investing", value: "Pro Investing", link: proInvestingTopics, icon: TrendingUp },
+  { name: "german", value: "German", link: germanTopics, icon: BookOpen },
 ] as const;
 
 type NavItem = typeof navItems[number];
@@ -302,5 +304,26 @@ export const contentData = {
   ],
   "gym": [
     { title: "Fundamentals", description: "Introduction to Gym and workout plans.", date: "Mar 07, 2026" },
+  ],
+  "german": [
+    { title: "Planner", description: "Full 17-mission course roadmap — Level 0 to Level 6. Zero knowledge to conversational fluency through a Hollywood Sci-Fi adventure.", date: "Oct 28, 2026" },
+    { title: "Alphabet", description: "Mission 001-A — The Decoder Ring. All 26 letters, 4 special characters (ä/ö/ü/ß), and the 3 biggest pronunciation traps: J=Y, V=F, W=V.", date: "Oct 28, 2026" },
+    { title: "First Contact", description: "Mission 001 — Wake up aboard a spaceship. Learn Guten Morgen, Wie heißt du?, and Ich heiße ___. Your very first German conversation.", date: "Oct 28, 2026" },
+    { title: "Pronunciation Bootcamp", description: "Mission 002 — Master German sounds: ch, sch, ei, ie, eu, ä, ö, ü. Mouth-position tips and minimal pair drills.", date: "Oct 28, 2026" },
+    { title: "Yes No Please Thank You", description: "Mission 003 — Ja, Nein, Bitte, Danke, Entschuldigung. Survive any basic interaction with 5 essential words.", date: "Oct 28, 2026" },
+    { title: "Numbers 1 To 20", description: "Mission 004 — Eins bis zwanzig. Count, tell time, and handle quantities at the space station.", date: "Oct 28, 2026" },
+    { title: "I Am I Have I Want", description: "Mission 005 — Ich bin, Ich habe, Ich möchte. Build your first real sentences about yourself.", date: "Oct 28, 2026" },
+    { title: "Days Time Common Words", description: "Mission 006 — Days of the week, telling time, and 20 essential everyday words for survival German.", date: "Oct 28, 2026" },
+    { title: "Der Die Das", description: "Mission 007 — German articles explained simply. Why every noun has a gender and how to handle it without panic.", date: "Oct 28, 2026" },
+    { title: "Verbs And Present Tense", description: "Mission 008 — Common verbs conjugated in present tense. Learn the pattern once, apply it to hundreds of verbs.", date: "Oct 28, 2026" },
+    { title: "Questions And Negatives", description: "Mission 009 — Asking questions with W-words (Was, Wer, Wo, Wann, Wie) and saying Nicht / Kein.", date: "Oct 28, 2026" },
+    { title: "Introducing Yourself", description: "Mission 010 — Full self-introduction: name, age, origin, job, and hobbies. Introduce others too.", date: "Oct 28, 2026" },
+    { title: "Food Drinks Ordering", description: "Mission 011 — Order food and drinks at a futuristic space station cafe. Ich möchte, Die Rechnung bitte.", date: "Oct 28, 2026" },
+    { title: "Shopping And Prices", description: "Mission 012 — Ask prices, understand numbers, and shop in a German-speaking city. Wie viel kostet das?", date: "Oct 28, 2026" },
+    { title: "Directions And Travel", description: "Mission 013 — Ask for and understand directions. Navigate airports, trains, and hotels in German.", date: "Oct 28, 2026" },
+    { title: "Konnen Mussen Wollen", description: "Mission 014 — Modal verbs: können (can), müssen (must), wollen (want). Express ability, obligation, and desire.", date: "Oct 28, 2026" },
+    { title: "Past Tense Perfekt", description: "Mission 015 — Talk about past events using Perfekt tense. haben/sein + Partizip II. Time-travel mystery debrief.", date: "Oct 28, 2026" },
+    { title: "Expressing Opinions Feelings", description: "Mission 016 — Say what you think, feel, and prefer. Ich finde, Ich glaube, Meiner Meinung nach.", date: "Oct 28, 2026" },
+    { title: "Final Galactic Challenge", description: "Mission 017 — The Final Galactic Diplomacy Challenge. A full German conversation mission using everything learned across all levels.", date: "Oct 28, 2026" },
   ],
 };
