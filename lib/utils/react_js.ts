@@ -1,1 +1,1 @@
-export const reactTopics: Array<string> = ["Introduction", "Function", "Hooks", "Components", "State Management", "Routing"]
+export const reactTopics: Array<string> = ["JSX Components", "Hooks Pareto", "Introduction", "Function", "Hooks", "Components", "State Management", "Routing"]
