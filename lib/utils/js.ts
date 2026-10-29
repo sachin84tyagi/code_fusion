@@ -1,1 +1,1 @@
-export const jsTopics: Array<string> = ["Pareto JS", "Introduction", "Variables & Data Types", "Execution Context", "Hoisting", "Scope & Closures", "Array", "Functions", "Objects", "Asynchronous", "Test Types in JS"]
+export const jsTopics: Array<string> = ["Pareto JS", "Introduction", "Variables & Data Types", "Execution Context", "Hoisting", "Scope & Closures", "Array", "JS Array", "Functions", "Objects", "Asynchronous", "Test Types in JS"]
